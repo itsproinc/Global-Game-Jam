@@ -1,0 +1,419 @@
+
+<html>
+<head>
+	<title>Praktikum Internet &amp; Teknologi Web | CSS Dasar</title>
+	<style>
+	body {
+		font-family : verdana;
+	}
+	h3 {
+		color : #3366FF;
+	}
+
+	font.tugas {
+		color :#ff3300;
+	}
+	
+	font.tugas-ket {
+		color :#ff0000;
+		font-size:18px;
+	}	
+	
+	.tugas-ket2 {
+		color:#CC0000;
+		font-size:22px;
+		font-style:italic;
+		font-weight:bold;
+		text-decoration:underline;
+	}	
+
+	.ket {
+		font-size : 10pt;
+	}
+
+	.code {
+		background:#eeeeee;
+		padding:4px;
+		font-family : "courier new";
+		font-size:11px;
+	}
+
+	a:link {color:#004789; text-decoration:none;}
+	a:visited {color:#004789; text-decoration:none;}
+	a:hover {color:#0370d6; text-decoration:underline;}
+	a:active {color:#0370d6; text-decoration:none;}
+
+	blockquote {
+	  font: 14px/22px normal helvetica, sans-serif;
+	  margin-top: 10px;
+	  margin-bottom: 10px;
+	  margin-left: 50px;
+	  padding-left: 15px;
+	  border-left: 3px solid #ccc;
+	} 
+
+
+	</style>
+</head>
+<body>
+	<table width="100%" bgcolor="#ffffff" cellpadding="10">
+		<tr>
+			<td align="right" class="ket"><font size="5"><b>Modul 3 CSS Dasar</b></font></td>
+		</tr>
+		<tr>
+			<td class="ket">
+                <h3 id="css">CSS</h3>
+                <p>Adalah Sebuah script yang dapat mengatur dan mengontrol tampilan halaman web serta memisahkan antara tampilan dan konten halaman web.</p>
+                <p>
+                	Berikut adalah salah satu contoh pemanfaatan CSS dalam membuat sebuah animasi sederhana.
+                </p>
+                <img src="images/case1.gif" alt="Case">
+            </td>
+		</tr>
+        <tr>
+            <td class="ket">
+            	<h3 id="struktur">Struktur Penulisan CSS</h3>
+                <p>Dalam menggunakan CSS terdapat struktur yang harus anda ikuti, struktur ini digunakan agar browser mengerti apa yang anda ketikan. Berikut ini adalah struktur penulisan sebuah script CSS.</p>
+                <img src="images/1.jpg"><br>
+            
+             <br><br><font class="tugas-ket"><strong>Keterangan:</strong>
+             <br>- Kerjakan semua latihan yang diperintahkan
+             <br>- Gunakan <strong>Code Editor</strong> untuk mengerjakan (Sublime Text 3 / Visual Studio Code)
+             <br>- Beri nama file sesuai ketentuan (cth: <strong>L2a043040023.html / L2a043040023.css</strong>)
+             <br>- Lihat hasilnya pada browser setiap kali selesai mengerjakan satu latihan
+            </td>
+        </tr>
+		<tr>
+			<td class="ket">
+			<h3 id="akses">akses CSS</h3>
+			ada 3 cara mengakses CSS yaitu <br>
+			<ol>
+				<li><b>Inline</b><br>
+				<br>Style CSS digunakan langsung di dalam tag HTML<br>
+				<img src="images/2.jpg"><br><br><br>
+				
+                <li><b>Internal Link</b>
+				<br>Style CSS diletakkan di halaman HTML. Biasanya terdapat di dalam tag &lt;head&gt;<br>
+				<img src="images/3.jpg"><br><br></br>
+                
+				<li><b>Eksternal Link</b><br>
+				<br>Semua deklarasi disatukan dalam satu file *.css. Cara memanggil file css di dalam html :
+				<br><br>
+				<div class="code">
+				&lt;link rel=stylesheet type="text/css" href="style.css"&gt;
+				</div><br>
+                baris tersebut disimpan di dalam tag head.<br>
+				<img src="images/4.jpg"><br><br>
+				Lalu script css dibuat di file lain yang dipanggil oleh file htmlnya. Contoh isi dari file css tersebut adalah sebagai berikut:
+				<img src="images/5.jpg"><br><br></br>
+			</ol>
+		
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+			<h3 id="classid">Class-Id</h3>
+			Setiap style css dibedakan berdasarkan selectornya. Terdapat dua selector yaitu class dan id.
+			<ul>
+				<li>class
+				<p>Class ditandai dengan menggunakan tanda titik '.' sebelum nama selector</p>	<p><font color="#006600">.[Class Name] {
+<br> &nbsp;  property:value;
+<br> &nbsp;  ...
+<br>}
+</font>
+</p>
+		<p><b>contoh :</b></p>
+		<div class="code">
+		.merah {
+		<br>  color:red;
+		<br>}
+		</div>
+		<p><b>Panggil selector :</b></p>
+
+		<div class="code">
+		&lt;p class="merah"&gt;Ini contoh penggunaan selector class.&lt;/p&gt;
+		</div>
+		</p>
+
+		<p><b>Multiple Classes</b>
+		<br><br>Penggunaan class yang lebih dari satu pada saat pemanggilan.
+		<div class="code">
+		<p>.rataKanan {
+<br> &nbsp; text-align:right;
+<br>}
+</p><p>.warnaMerah {
+<br> &nbsp; color:red;
+<br>}
+</p>
+		</div>
+		<p>Pemanggilan di HTML</p>
+		<div class="code">
+		<p>&lt;p class="rataKanan warnaMerah"&gt;ini contoh pemanggilan kelas lebih dari satu.&lt;/p&gt;
+</p>
+		</div>
+
+		</p>	
+		<p>Contoh hasilnya:</p>
+				<img src="images/6.png"><br><br>		
+        		</li>
+				<li>id
+				<p>Penggunaan id ditandai dengan memakai tanda '#'. Syntax nya :</p>
+				<p><font color="#006600">#[ID Name] {
+<br> &nbsp;  property:value;
+<br> &nbsp;  ...
+<br>}
+</font>
+</p>
+			<p><b>contoh :</b></p>
+			<div class="code">
+			<p>#footer {
+<br>  color:blue;
+<br>}
+</p>
+			</div>
+
+			<p>
+			Pemanggilan di HTML
+			</p>
+
+			<div class="code">
+			<p>&lt;p id="footer"&gt;Berikut ini contoh penggunaan selector id.&lt;/p&gt;</p>
+			</div><br>
+            <p>Contoh hasilnya:</p>
+            <img src="images/9.png"><br><br></br>            
+            </li>
+            
+			<li>Class Vs Id
+			<p>Id selector hanya dapat digunakan sekali pada saat pemanggilan di HTML. Class Selector dapat dipanggil berkali-kali di HTML. Perbedaan lain adalah, id selector dapat dipanggil oleh fungsi Javascript getElementById(). Akan dijelaskan pada pertemuan tentang JavaScript.</p>
+			</ul>
+		
+			</td>
+		</tr>
+        <tr>
+			<td class="ket">
+			<h3 id="text">CSS Text</h3>
+            Digunakan untuk memanipulasi <strong>tulisan</strong> pada Halaman web.<br>
+            Pelajari Property &amp; Value pada  CSS Text <a href="modul3-reference.html#kategori-text" target="_blank">disini.</a>
+            </td>
+        </tr>
+        <tr>
+			<td class="ket">
+			<h3>CSS Font</h3>
+            Digunakan untuk memanipulasi <strong>huruf</strong> pada Halaman web.<br>
+            Pelajari Property &amp; Value pada  CSS Font <a href="modul3-reference.html#kategori-font" target="_blank">disini.</a>
+            </td>
+        </tr>
+        <tr>
+			<td class="ket">
+			<h3>CSS List &amp; Marker</h3>
+            Digunakan untuk memanipulasi <strong>list</strong> pada Halaman web.<br>
+            Pelajari Property &amp; Value pada  CSS List &amp; Marker <a href="modul3-reference.html#kategori-listdanmarker" target="_blank">disini.</a><br>
+				</br>            
+            </li>            
+            
+            </td>
+        </tr>
+        <tr>
+			<td class="ket">
+			<h3 id="background">CSS Background</h3>
+            Digunakan untuk memanipulasi <strong>Background</strong> pada Halaman web.<br>
+            Pelajari Property &amp; Value pada  CSS Background <a href="modul3-reference.html#kategori-background" target="_blank">disini.</a><br>
+            Pada latihan kali ini kita akan mencoba meletakan gambar sebagai background pada halaman web. sebetulnya gambar tidak hanya dapat diletakkan pada background halaman saja, tetapi juga dapat diletakkan pada background sebuah elemen.<br>
+            </li>            
+            
+            </td>
+        </tr>        
+        
+		<tr>
+			<td class="ket">
+			<h3 id="pseudo">Pseudo class</h3>
+			<p>syntax pseudo class :</p>
+			<div class="code">
+			<p>selector.class:pseudo-class {property: value}</p>
+			</div>
+			<p>Biasanya pseudo class digunakan untuk memberikan style pada link atau pada elemen ketika akan berinteraksi dengan kursor (mouseover / klik).</p> 
+			<div class="code">
+			<p>a:link {color:#FF0000; text-decoration:none;}
+            <br>a:visited {color:#0000FF; text-decoration:none;}
+            <br>a:hover {font-size:20; color:#00FF00; text-decoration:underline;}
+            <br>a:active {color:#FF00FF; text-decoration:underline;}
+            </p>
+			</div>
+			*Buka Halaman Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman Referensi</a>
+			<blockquote>
+				<b>Tips & Trik</b> <br>
+				Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag CSS dan HTML.
+			</blockquote>
+			
+			</td>
+		</tr>
+		<tr>
+			<td class="ket">
+			<a name="dimension"><h3>HTML Block &amp; Element</h3></a>
+                <strong>HTML Block Elements</strong><br>
+                <p>Block Elemen pada dasarnya sudah memiliki baris baru setelah dan sebelum elemennya.</p>
+                Contoh Elemen: <strong> &lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt; </strong><br><br>
+
+                <strong>HTML Inline Elements</strong><br>
+                <p>Inline Elemen ditampilkan tanpa baris baru pada halaman.</p>
+                Contoh Elemen: <strong> &lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt; </strong>
+
+                <strong>Mengubah Elemen Block/Inline</strong><br>
+                <p>Sebuah elemen HTML, dapat kita ubah perilakunya dengan menggunakan properti css display.</p>
+                Contoh:<br>
+                 <strong> p { display: inline; }</strong> <br>
+               	 <strong> img { display: block; }</strong>
+            </td>
+		</tr>
+		<tr>
+			<td class="ket">
+			<a name="dimension"><h3>HTML &lt;div&gt; &amp; &lt;span&gt;</h3></a>
+                <strong>HTML &lt;div&gt;</strong><br>
+                <ul>
+                	<li>Tag &lt;div&gt; merupakan block elemen pada HTML yang biasa digunakan <strong>sebagai kontainer / wadah dari sekumpulan elemen-elemen HTML lain di dalamnya</strong>. </li>
+                	<li>Tag &lt;div&gt; jika digunakan hanya pada HTML, tidak akan memiliki fungsi apa-apa. Kecuali, <strong>hanya sebagai elemen block yang akan menambahkan baris baru pada elemen di dalamnya</strong></li>
+                	<li>Jika digunakan bersamaan dengan CSS, Tag &lt;div&gt; dapat berfungsi untuk mengatur style pada sekumpulan elemen HTML yang berada di dalamnya.</li>
+                	<li>Penggunaan lain untuk Tag &lt;div&gt; adalah sebagai cara untuk mengatur layout pada halaman.</li>
+                </ul>
+                <br>
+
+                <strong>HTML &lt;span&gt;</strong><br>
+                <ul>
+                	<li>Tag &lt;span&gt; merupakan inline elemen pada HTML yang biasa digunakan <strong>sebagai kontainer/ wadah dari teks</strong></li>
+                	<li>Tag &lt;span&gt;<strong> tidak menciptakan baris baru</strong> pada elemen di dalamnya.</li>
+                </ul>
+            </td>
+		</tr>
+		<tr>
+			<td class="ket">
+			<a name="dimension"><h3>CSS Dimension</h3></a>
+                <p>Berfungsi untuk <strong>mengatur ukuran (panjang &amp; lebar) sebuah elemen</strong>.</p>
+                <strong>Terdiri dari :</strong><br>
+                <ul>
+                    <li>Width
+                    <li>Height
+                </ul>
+                <img src="images/dimensi.jpg"><br>
+                <h3>Untuk belajar lebih lanjut</h3>
+                <p>Bisa dipelajari link berikut : </p>
+                <ul type="1">
+                	<li><a href="https://www.youtube.com/playlist?list=PLFIM0718LjIUBrbm6Gdh6k7ZUvPIAZm7p" target="blank">CSS dasar</a></li>
+                	<li><a href="https://www.w3schools.com/css/default.asp" target="blank">W3schools</a></li>
+                </ul>
+            </td>
+        <tr>
+		</tr>
+		<tr>
+        	<td class="tugas-ket2" id="tugas"> <br><br>Latihan 3a</td>
+        </tr>
+		<tr>
+		<td class="ket">
+			<a name="center">
+			<h3>buka file .txt dibawah ini, lalu copy kan isinya ke sebuah file HTML dan simpan dengan nama:</h3>		
+			<font class="tugas">L3a&lt;NRP&gt;.html</font><br>
+			<a href="images/latihan3a.txt" target="_blank">
+				<h4>&gt;&gt; download file latihan 3a &lt;</h4>
+			</a>
+			<h3>Buatlah file css dan hubungkan ke file html tadi, dengan spesifikasi dibawah ini (cari sendiri atribut CSS yang sesuai), simpan dengan nama:</h3>
+			<font class="tugas">L3a&lt;NRP&gt;.css</font><br><br>
+			<ul>
+				<li>background halaman : aqua</li>
+				<li>ubah semua huruf pada halaman menjadi : Georgia</li>
+				<li>jenis huruf untuk heading 1 : Comic Sans MS</li>
+				<li>ukuran huruf untuk heading 1 : 60px</li>
+				<li>warna huruf untuk heading 1 : darkblue</li>
+				<li>ubah heading 4 menjadi rata kanan</li>
+				<li>ubah heading 4 menjadi miring</li>
+				<li>setiap paragraf menjadi rata kiri kanan</li>
+			</ul>
+		<h3>sehingga hasilnya <a href="images/hasil_latihan2a.png" target="_blank">seperti ini :</a></h3>
+		<img src="images/hasil_latihan2a.png" width="600">
+			<br>
+			*Buka Halaman Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman Referensi</a>
+			<blockquote>
+				<b>Tips &amp; Trik</b> <br>
+				Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag CSS dan HTML.
+			</blockquote>
+		</td>
+		</tr>	
+		<tr>
+        	<td class="tugas-ket2"> <br><br>Latihan 3b</td>
+        </tr>
+		<tr>
+		<td class="ket">
+			<a name="center">
+			<h3>modifikasi file html dan css pada latihan 3a, simpan dengan nama :</h3>		
+			<font class="tugas">L3b&lt;NRP&gt;.html</font><br>
+			<font class="tugas">L3b&lt;NRP&gt;.css</font><br>
+			<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti ini :</h3>
+			<img src="images/hasil_latihan2b.png" width="600">
+			<br>
+			*Buka Halaman Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman Referensi</a>
+			<blockquote>
+				<b>Tips &amp; Trik</b> <br>
+				Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag CSS dan HTML.
+			</blockquote>
+		</td>
+		</tr>
+		<tr>
+        	<td class="tugas-ket2"> <br><br>Latihan 3c</td>
+        </tr>
+		<tr>
+		<td class="ket">
+			<a name="center">
+			<h3>modifikasi file html dan css pada latihan 3b, simpan dengan nama :</h3>		
+			<font class="tugas">L3c&lt;NRP&gt;.html</font><br>
+			<font class="tugas">L3c&lt;NRP&gt;.css</font><br>
+			<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti ini :</h3>
+			<img src="images/hasil_latihan2c.gif" width="600">
+			<br>
+			*Buka Halaman Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman Referensi</a>
+			<blockquote>
+				<b>Tips &amp; Trik</b> <br>
+				Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag CSS dan HTML.
+			</blockquote>
+
+		</td>
+		</tr>	
+		<tr>
+        	<td class="tugas-ket2"> <br><br>Latihan 3d</td>
+        </tr>
+		<tr>
+		<td class="ket">
+			<a name="center">
+			<h3>modifikasi file html dan css pada latihan 2c, simpan dengan nama :</h3>		
+			<font class="tugas">L3d&lt;NRP&gt;.html</font><br>
+			<font class="tugas">L3d&lt;NRP&gt;.css</font><br>
+			<h4>download gambar berikut ini sebagai background : <a href="images/background.png" target="_blank">&lt;background image&gt;</a></h4>
+			<h3>Lakukan modifikasi (ubah/tambahkan) pada kode HTML / CSS sehingga menghasilkan tampilan seperti ini :</h3>
+			<img src="images/hasil_latihan2d.png" width="600">
+			<br>
+			*Buka Halaman Referensi untuk melihat properti css yang tersedia. <a href="modul3-reference.html">Halaman Referensi</a>
+			<blockquote>
+				<b>Tips &amp; Trik</b> <br>
+				Jangan Biasakan Menghafal Tag-Tag CSS atau HTML secara langsung. Tapi Biasakan latihan menggunakan tag-tag CSS dan HTML.
+			</blockquote>
+		</td>
+		</tr>
+		<tr>
+			<td>
+				<hr>
+					<font color="#FF0000" size="+1">
+							<h4>Keterangan Pengiriman Tugas</h4>
+							<ul>
+								<li>Compress folder tugas2 tersebut menjadi file ZIP dengan nama [itw2018X] tugas3-NRP-nama_lengkap.zip</li>
+								<li>Dengan X adalah nama kelas kalian, contoh: <strong>[itw2018a] tugas3-043040023-Sandhika_Galih</strong></li>
+								<li>Kirimkan tugasnya ke email masing2 dosen sesuai kelas</li>
+								<li>Tulis subject email sesuai dengan nama file zip-nya</li>
+								<li>Kumpulkan paling lambat SEBELUM KULIAH PERTEMUAN BERIKUTNYA</li>
+							</ul>
+						</font>
+			</td>
+		</tr>			
+	</table>
+<br>
+<br>
+<br>
+
+</body>
+</html>
