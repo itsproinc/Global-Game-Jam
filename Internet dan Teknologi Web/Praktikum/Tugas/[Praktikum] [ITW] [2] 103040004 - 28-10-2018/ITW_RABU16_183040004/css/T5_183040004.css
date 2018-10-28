@@ -1,6 +1,8 @@
 body {
 	background-color: antiquewhite;
-	margin: 0% 10%;
+	min-width: 1200px;
+	max-width: 1200px;
+	margin-left: 150px;
 	font-family: arial;
 }
 
@@ -49,10 +51,6 @@ body {
 	padding: 5px 20px;
 }
 
-#body .article h1 {
-	line-height: 0;
-}
-
 #body .article h2 {
 	padding-top: 10px;
 	line-height: 0;
@@ -67,4 +65,36 @@ body {
 	background-color: floralwhite;
 	padding: 5px;
 	margin-top: 5px;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+p {
+	font-size: 15px;
+}
+
+.article {
+	background-color: floralwhite;
+	display: inline-block;
+}
+
+.column-left {
+	min-width: 800px;
+	max-width: 800px;
+	border-right: 1px solid black;
+	padding-right: 30px;
+	float: left;
+}
+
+.column-right {
+	min-width: 250px;
+	max-width: 250px;
+	float: left;
+	padding-left: 30px;
+}
+
+.clear {
+	clear: both;
 }

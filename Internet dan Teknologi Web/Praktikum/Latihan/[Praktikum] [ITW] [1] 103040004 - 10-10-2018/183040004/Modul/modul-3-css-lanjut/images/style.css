@@ -1,0 +1,40 @@
+body {
+	font-family: arial;
+}
+
+h2 {
+	font-family: georgia;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+	padding-top: 50px;
+}
+
+#header {
+	width: 700px;
+	height: 150px;
+	background-color: silver;
+	margin: 0 auto;
+}
+
+#container {
+	width: 648px;
+	border: 1px solid grey;
+	padding: 25px;
+	margin: 0 auto;
+}
+
+#footer {
+	width: 700px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+}
+
+.footer {
+	display: block;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 10px;
+}

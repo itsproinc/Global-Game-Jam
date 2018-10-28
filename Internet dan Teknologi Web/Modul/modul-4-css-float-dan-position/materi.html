@@ -1,0 +1,476 @@
+<html>
+	<head>
+		<title>Praktikum Internet &amp; Teknologi Web | CSS Float dan Position</title>
+		<style>
+			body {
+				font-family : verdana;
+			}
+			h3 {
+				color : #3366FF;
+			}
+			font.tugas {
+				color :#ff3300;
+			}
+			font.tugas-ket {
+				color :#ff0000;
+				font-size:18px;
+			}
+			.tugas-ket2 {
+				color:#CC0000;
+				font-size:22px;
+				font-style:italic;
+				font-weight:bold;
+				text-decoration:underline;
+				}
+			.ket {
+				font-size : 10pt;
+			}		
+			.code {
+				background:#eeeeee;
+				padding:4px;
+				font-family : "courier new";
+				font-size:11px;
+			}
+			a:link {
+				color:#004789; text-decoration:none;
+			}
+			a:visited {
+				color:#004789; text-decoration:none;
+			}
+			a:hover {
+				color:#0370d6; text-decoration:underline;
+			}
+			a:active {
+				color:#0370d6; text-decoration:none;
+			}
+		</style>
+	</head>
+	<body>
+		<table width="100%" bgcolor="#ffffff" cellpadding="10">
+			<tr>
+				<td align="right" class="ket"><font size="5"><b>Modul 5 CSS Float dan Position</b></font></td>
+			</tr>
+			<tr>
+				<td>
+					<a name="sejarahfloat"><h3 id="float">Sejarah Float</h3></a>
+					<p>
+						Dulunya, ketika para developers pertama kali melakukan transisi dari HTML layout berbasis tabel ke layout tanpa tabel, salah satu CSS property yang memberikan peran yang sangat penting, css property itu adalah <strong>float</strong>.
+					</p>
+					<p>
+						Untuk materi kali ini, kita akan membahas apa itu <strong>Float</strong> dan <strong>bagaimana float ini memberikan efek terhadap elemen.</strong>
+					</p>
+					<hr>
+
+					<p>
+						Agar lebih memahami bagaimana float digunakan, silahkan amati gambar dibawah ini.
+						<img src="images/print-layout.png"><br>
+					</p>
+					
+					<p>Pada print design, gambar pada halaman di-set sedemikian rupa sehingga teks/tulisan berada rapih disekitar gambar tersebut.</p>
+					<p>Pada web design, elemen halaman yang diberi properti CSS float berprilaku sama seperti gambar pada print design diatas.</p>
+					<img src="images/web-layout.png"><br>
+
+					<h4>Tujuan CSS Float</h4>
+					<ul>
+						<li>Berfungsi untuk <b>memaksa</b> sebuah elemen menjadi berada di kiri atau dikanan halaman.
+						<li>Elemen yang berada setelah elemen yang diberi float akan terpengaruh fungsi float tersebut.
+						<li>Elemen yang berada sebelum elemen yang diberi float tidak akan terpengaruh.
+						<li>Property:<br>
+						<img src="images/10.jpg"><br>
+						<li>Untuk me-nonaktifkan fungsi float gunakan:<br>
+						<img src="images/11.jpg"><br>
+					</ul>
+
+					<h4>Contoh Float Left</h4>
+					<img src="images/float-left.png"><br>
+
+					<h4>Contoh Float Right</h4>
+					<img src="images/float-right.png"><br>
+
+					<h4>CSS Float sebagai Struktur Halaman</h4>
+					<p>Selain contoh-contoh diatas, float juga dapat digunakan untuk membuat struktur halaman seperti gambar dibawah ini:</p>
+					<img src="images/web-structure.png"><br>
+
+					<h4>Menghilangkan Float</h4>
+					<p>untuk menghilangkan fungsi float pada halaman, gunakan property clear. Sebuah elemen yang diberi property clear tidak akan pindah posisi untuk mengisi kekosongan pada elemen diatasnya. Ilustrasinya dapat dilihat pada gambar dibawah ini:</p>
+					<img src="images/uncleared-footer.png"><br>
+					<p>Gambar diatas menunjukkan bahwa ukuran dari sidebar lebih kecil daripada lebar main content. Elemen footer dibawahnya melihat masih ada ruang kosong dibawah sidebar yang bisa ditempati, sehingga ruang kosong tersebut diisi oleh footer. Untuk memperbaiki masalah ini, digunakan sintaks berikut:</p>
+					<img src="images/clear-float.png"><br>
+					<p>sehingga hasilnya seperti gambar dibawah ini:</p>
+					<img src="images/cleared-footer.png"><br>
+				</td>
+			</tr>
+			<tr>
+				<td><hr>
+					<a name="posisi"><h3>Position</h3></a>
+					<p>
+						properti CSS Positioning membuat kita dapat memposisikan sebuah elemen. Itu juga bisa menempatkan sebuah elemen dibelakang elemen lainya, dan menentukan akan seperti apa konten dari sebuah elemen jika terlalu besar. Elemen bisa di posisikan menggunakan properti <strong>'top','bottom','left' </strong>dan <strong>'right'</strong> teman-teman bisa menggunakan properti tersebut dengan syarat sudah memberikan posisi dari sebuah elemen terlebih dahulu. properti tersebut juga akan memberikan efek yang berbeda pada tiap-tiap posisi, tergantung posisi apa yang akan kita gunakan. terdapat empat posisi yang akan kita pelajari.
+					</p>
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<h3>Property position</h3>
+					<ol>
+						<li>Static</li>
+						<li>Absolute</li>
+						<li>Relative</li>
+						<li>Fixed</li>
+					</ol>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Bagaimana cara memberikan properti posisi terhadap sebuah elemen ?
+					</p>
+					<p>
+						Caranya sama seperti kalian memberikan properti css lainya.<br>
+						<h2>position:value;</h2>
+						value diatas bisa berisi : Absolute, Relative, Fixed Atau Static.
+						<br><br>
+						jangan lupa untuk mendefinisikan top,bottom, left dan rightnya jika diperlukan.
+						<br>
+						top:value
+						bottom:value
+						left:value
+						right:value
+						value diatas berisi nilai bersatuan px, misalkan 100px, 120px atau bisa juga menggunakan value negative -120px
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2>Posisi Static</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Posisi ini merupakan posisi default suatu elemen (statis). Tataletaknya seperti div biasa. Pada posisi ini top, right, bottom dan left tidak akan berpengaruh
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="images/statis-code.jpg"><br><img src="images/statis-compile.jpg"><br>
+				</td>
+			</tr>	
+			<tr>
+				<td><h2>Posisi Relative</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Elemen diposisikan secara relatif berdasarkan posisi awalnya.
+						Posisi inilah yang sering digunakan, pada posisi ini kita bisa memanfaatkan properti top,left, bottom dan right. Objek akan berubah posisi terhadap elemen utama, dan juga relatif terhadap dirinya. jika elemen dengan posisi relatif kita geser, maka tempat asalnya akan tetap ada (berbeda dengan absolute / fixed, tempat asalnya hilang.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="images/relative-code.jpg"><img src="images/relative-style.png"><br>
+					<a href="sources/relative.html"><h3>Hasil</h3></a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2>Posisi Absolute</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Elemen diposisikan didepan elemen-elemen HTML lain. Dengan menerapkan <strong>position:absolute</strong>, maka objek akan mengikuti parent (induk elemen) dengan catatan induk elemen harus menggunakan position:non-static (relative, absolute atau fixed).
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="images/absolute-code.jpg"><img src="images/absolute-style.jpg"><br>
+					<a href="sources/absolute.html"><h2>Hasil</h2></a>
+				</td>
+			</tr>
+			<tr>
+				<td><h2>Posisi Fixed</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Elemen diposisikan didepan elemen-elemen HTML lain, elemen tidak akan berubah meskipun kita melakukan scroll pada browser.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="images/fixed-code.jpg"><img src="images/fixed-style.jpg"><br>
+					<a href="sources/fixed.html"><h2>Hasil</h2></a>
+				</td>
+			</tr>
+			<tr>
+				<td class="ket">
+					<a name="zindex"><h3>z-index</h3></a>
+						<p>Digunakan untuk mengatur urutan tumpukan pada elemen yang memiliki posisi selain static.</p>
+					<img src="images/z-index.gif" alt="">
+				</td>
+		</tr>
+
+
+		<tr>
+			<td class="tugas-ket2"> <br><br><a name="latihan" id="latihan">Latihan 5a</a></td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>buka file .txt dibawah ini, lalu copy kan isinya dan simpan dengan nama:</h3>
+					<font class="tugas">L5a&lt;NRP&gt;.html</font><br>
+					<a href="images/latihan5a.txt" target="_blank">
+						<h4>&gt;&gt; download file latihan 5a &lt;</h4>
+					</a>
+					<h3>Buatlah file css untuk menghias file html tadi dengan spesifikasi dibawah ini, simpan dengan nama:</h3>
+					<font class="tugas">L5a&lt;NRP&gt;.css</font><br><br>
+
+					<h4>body</h4>
+					<ul>
+						<li>jenis font : georgia</li>
+						<li>warna background: #F9FF9E</li>
+					</ul>
+
+					<h4>p</h4>
+					<ul>
+						<li>Buat margin menjadi di tengah</li>
+					</ul>
+
+					<h4>id page-wrap</h4>
+					<ul>
+						<li>lebar : 200px</li>
+						<li>? : 0 auto</li>
+						<li>padding untuk ke-empat sisinya : ?</li>
+					</ul>
+
+					<h4>id content</h4>
+					<ul>
+						<li>width : 46px</li>
+						<li>margin kanan : 20px</li>
+						<li>padding kanan : 20px</li>
+						<li>border kanan (cari property yang tepat) : 1px</li>
+						<li>border kanan (cari property yang tepat) : solid</li>
+						<li>border kanan (cari property yang tepat) : #333</li>
+						<li>tinggi minimal : ?</li>
+					</ul>
+
+					<h4>id sidebar</h4>
+					<ul>
+						<li>lebar : 25px</li>
+					</ul>
+
+					<h4>id footer</h4>
+					<ul>
+						<li>tipe paragraf : rata tengah</li>
+						<li>warna background: #333</li>
+						<li>jenis huruf : verdana</li>
+						<li>warna huruf : putih</li>
+						<li>lebar : ?</li>
+						<li>tinggi : 40px</li>
+						<li>margin atas bawah : ?</li>
+						<li>margin kiri kanan : buat berada di tengah</li>
+						<li>padding atas : 200px</li>
+					</ul>
+					<h3>sehingga hasilnya <a href="images/latihan5a.png" target="_blank">seperti ini</a>.</h3>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br><a name="latihanfloat">Latihan 5b</a></td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>modifikasi file html dan css pada latihan 5a, simpan dengan nama :</h3>
+					<font class="tugas">L5b&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L5b&lt;NRP&gt;.css</font>
+					<h3>modifikasi file css dengan spesifikasi dibawah ini:</h3><br>
+					<ul>
+						<li>tambahkan properti float dengan value left untuk content dan sidebar</li>
+						<li>buat kelas baru dengan nama clear dan isi atribut/propertinya dengan clear dan value both</li>
+					</ul>
+					<h3>sehingga hasilnya <a href="images/latihan5b.png" target="_blank">seperti ini</a>.</h3>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br><a name="latihanfloat">Latihan 5c</a></td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>modifikasi file html dan css pada latihan 5b, simpan dengan nama :</h3>
+					<font class="tugas">L5c&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L5c&lt;NRP&gt;.css</font>
+					<h3>modifikasi file css / html dengan spesifikasi dibawah ini:</h3><br>
+					<h4>Tambahkan kelas kotak pada file css dengan spesifikasi sebagai berikut:</h4>
+					<ul>
+						<li>lebar : 8px</li>
+						<li>tinggi : 10px</li>
+						<li>margin : ?</li>
+						<li>float : ?</li>
+					</ul>
+					<h4>tambahkan gambar untuk tiap-tiap div dengan kelas kotak, gambar dapat diambil di folder images/gallery pada modul.</h4>
+					<h4>Tambahkan pula div baru dengan nama kelas clear pada file html, simpan dibawah div dengan kelas kotak.</h4>
+					<h3>sehingga hasilnya <a href="images/latihan5c.png" target="_blank">seperti ini</a>.</h3>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br>
+				<a name="latihanposisi">Latihan 5d</a>
+			</td>
+		</tr>
+			
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>modifikasi file html dan css pada latihan berikut, simpan dengan nama :</h3>
+					<font class="tugas">L5d&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L5d&lt;NRP&gt;.css</font>
+					<h3>modifikasi file css / html dengan spesifikasi dibawah ini:</h3><br>
+					<h4>Tambahkan 2 buah div pada file html, letakkan dibawah div yang memiliki nama kelas clear. <br> beri kelas div tersebut dengan nama bg-kanan dan bg-kiri.</h4>
+					<h4>tambahkan kelas pada file css dengan spesifikasi berikut:</h4>
+					<h4>bg-kanan</h4>
+					<ul>
+						<li>ubah lebar dan tinggi nya sesuai dengan ukuran gambar.</li>
+						<li>gunakan background <a href="images/gallery/kanan.png" target="_blank">ini</a>. (dapat diambil di modul di dalam folder gallery)</li>
+						<li>tambahkan properti agar background tidak berulang (repeat)</li>
+						<li>ubah posisi menjadi absolute</li>
+						<li>bottom : ?</li>
+						<li>right : 40px</li>
+						<li>z-index : -99</li>
+						<li>tinggi : 560px</li>
+						<li>lebar : ?</li>
+					</ul>
+					<h4>bg-kiri</h4>
+					<ul>
+						<li>ubah lebar dan tinggi nya sesuai dengan ukuran gambar.</li>
+						<li>gunakan background <a href="images/gallery/kiri.png" target="_blank">ini</a>. (dapat diambil di modul di dalam folder gallery)</li>
+						<li>background-repeat: ?</li>
+						<li>ubah posisi menjadi :?</li>
+						<li>bottom : 0px</li>
+						<li>right : ?</li>
+						<li>tinggi : ?</li>
+						<li>lebar : 700px</li>
+					</ul>
+					
+					<h3>sehingga hasilnya <a href="images/latihan5d.png" target="_blank">seperti ini</a>.</h3>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br><a name="latihanposisi">Latihan 5e</a></td>
+		</tr>
+		<tr>
+			<td class="ket">
+				<a name="center">
+					<h3>silahkan download <a href="sources/latihan5e.txt" target="_blank">latihan5e.txt</a> , simpan dengan nama :</h3>
+					<font class="tugas">L5e&lt;NRP&gt;.html</font><br>
+					<font class="tugas">L5e&lt;NRP&gt;.css</font>
+					<h3>modifikasi file css / html dengan spesifikasi dibawah ini:</h3><br>
+					
+					<h4>tambahkan kelas pada file css dengan spesifikasi berikut:</h4>
+					<h4>Kelas login</h4>
+					<ul>
+						<li>lebar: 280px</li>
+						<li>tinggi: 250px</li>
+						<li>warna background: ?</li>
+						<li>margin: 0 auto</li>
+						<li>posisi: relative</li>
+					</ul>
+					<h4>ghost</h4>
+					<ul>
+						<li>width: 200px</li>
+						<li>padding: 8px</li>
+						<li>color: #fff</li>
+						<li>border: 1px solid #fff</li>
+						<li>text-align: center</li>
+						<li>outline: ?</li>
+						<li>margin-bottom: 10px</li>
+						<li>font-size: 15px</li>
+						<li>color: black</li>
+						<li>cursor: hand</li>
+					</ul>
+					
+					<h4>center</h4>
+					<ul>
+						<li>margin: 0 auto</li>
+						<li>lebar: 200px;
+					</ul>
+
+					<h4>user</h4>
+					<ul>
+						<li>lebar: 120px</li>
+						<li>margin: 0 auto</li>
+					</ul>
+
+					<h4>user img</h4>
+					<ul>
+						<li>lebar: 100px</li>
+					</ul>
+
+					<h4>btn</h4>
+					<ul>
+						<li>lebar: 120px</li>
+						<li>padding: 8px</li>
+						<li>color: #fff</li>
+						<li>border: 1px solid #fff</li>
+						<li>text-align: ?</li>
+						<li>font-size: 15px</li>
+						<li>warna text: black</li>
+					</ul>
+			
+					<h4>xbtn</h4>
+						<ul>
+							<li>silahkan cari sendiri property apa saja yang diperlukan untuk bisa menghasilkan seperti gambar dibawah</li>
+						</ul>
+						
+					<h4>login .xbtn img</h4>
+					<ul>
+						<li>lebar: 30px</li>
+						<li>border-radius: 100px</li>
+						<li>border: 1px ? hitam</li>
+					</ul>
+
+					<h3>sehingga hasilnya <a href="images/latihan5e.png" target="_blank">seperti ini</a>.</h3>	
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tugas-ket2"> <br><br>
+				<a name="tugas">Tugas untuk dikerjakan dirumah</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Setelah berhasil mengerjakan semua latihan. Silahkan buat sebuah halaman website seperti dibawah ini
+				<br><img src="images/T5b.gif">
+			</td>
+			</tr>				
+	</table>
+
+		<font color="#0066CC">
+			Setiap latihan dan tugas dimasukkan ke dalam folder t5&lt;NRP&gt; contoh (contoh: t5&lt;163040025&gt;), lalu zip nama file sesuai dengan ketentuan yang telah disepakati . Hasil dari latihan harus sama dengan hasil yang dicontohkan!<br>
+			Buatlah sebuah halaman index untuk tugas 5 (seperti yang telah dibuat untuk tugas-tugas sebelumnya)<br>
+			Kumpulkan tugas5 pada hari yang telah disepakati dengan asisten masing-masing.
+		</font>
+		<br><br>
+		<br><br>
+		<br><br><hr>
+		<div>
+			<a name="link"><h4>Tutorial :</h4></a>
+			<p>Video bisa dilihat disini :</p><br>
+			<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/cis0O2GgUVI?list=PLFIM0718LjIUu4Ju9GUL5zpLcuq08TKYr" frameborder="0" allowfullscreen></iframe><br><br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/uS4MoynBCxc?list=PLFIM0718LjIUBN2MQbCYivRxnWHODCy0o" frameborder="0" allowfullscreen></iframe>
+			</center>		
+			
+			<p>Link materi terkait bisa dilihat <a href="https://http://w3schools.com/">disini</a></p>
+		</div>
+		<br>
+		<br>
+	</body>
+</html>

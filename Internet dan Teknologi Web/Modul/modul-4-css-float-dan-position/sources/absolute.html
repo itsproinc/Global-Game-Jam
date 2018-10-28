@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Penggunaan Absolute</title>
+	<style>
+		div{
+			border: 2px solid black;
+			width: 100px;
+			height: 100px;
+			margin: 4px;
+		}
+		.relative{
+			background: lightblue;
+			height: 300px;
+			width: 300px;
+			position: relative;
+		}
+		.absolute{
+			background: red;
+			position: absolute;
+			/*menggunakan top, left*/ 
+			bottom: 0;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="relative">
+		Elemen relative sebagai induk elemen
+		<div class="absolute">
+		Elemen Absolute
+		</div>
+	</div>
+</body>
+</html>

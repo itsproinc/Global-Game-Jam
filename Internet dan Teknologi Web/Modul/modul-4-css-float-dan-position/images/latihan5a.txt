@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Coba CSS Float</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="page-wrap">
+		<div id="content">
+			<h1>Judul Artikel</h1>
+			<div class="kotak"></div>
+			<div class="kotak"></div>
+			<div class="kotak"></div>
+			<div class="kotak"></div>
+			<div class="kotak"></div>
+			<p>
+				SpongeBob SquarePants adalah sebuah serial animasi yang paling terpopuler di Nickelodeon. Pada awalnya serial kartun animasi ini ditayangkan pada tahun 1999 di Amerika Serikat dan dicipta oleh Stephen Hillenburg, seorang animator dan ahli biologi laut, dan diterbitkan oleh perusahaannya, United Plankton Pictures Inc.	
+			</p>
+			<p>
+				Serial kartun animasi ini ditayangkan di Malaysia menerusi saluran Nickelodeon dan TV3, dan juga melalui saluran TV9 yang telah diterjemahkan ke dalam bahasa Melayu.
+			</p>
+			<p>Di Indonesia serial kartun animasi ini dipopulerkan oleh Lativi (sekarang tvOne), kemudian hak tayang acara-acara yang diproduksi oleh Nickelodeon dibeli oleh Global TV (sekarang GTV). Kartun ini diciptakan oleh seorang ahli biologi laut dan animator Stephen Hillenburg dan lalu dirilis melalui perusahaannya United Plankton Pictures Inc. Serial kartun animasi ini settingnya berada di Samudra Pasifik di kota Bikini Bottom.</p>
+		</div>	
+		<div id="sidebar">
+			<h3>Link Terkait</h3>
+			<ul>
+				<li><a href="">Link 1</a></li>
+				<li><a href="">Link 2</a></li>
+				<li><a href="">Link 3</a></li>
+				<li><a href="">Link 4</a></li>
+				<li><a href="">Link 5</a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

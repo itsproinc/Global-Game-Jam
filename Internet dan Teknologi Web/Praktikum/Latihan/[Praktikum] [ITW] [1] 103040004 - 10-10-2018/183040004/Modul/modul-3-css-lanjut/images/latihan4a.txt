@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Box Model</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>BERITA <i>ASIAN PARA GAMES 2018</i></h1>
+			</div>
+			<div class="content">
+				<div class="image">
+					<img src="paragames.JPG">
+				</div>
+				<h3>Opening Ceremony Asian Para Games 2018 <b>Masuk Trending Topic Dunia</b></h3>
+				<p id="p1">Upacara pembukaan Asian Para Games 2018 mendapat tanggapan positif dari masyarakat Indonesia. Walau tak sebesar perhelatan Asian Games, Asian Para Games 2018 juga mendapat perhatian.</p>
+				<p>Di media sosial, Opening Ceremony Asian Para Games 2018 juga menjadi pembicaraan hangat. Di Twitter Indonesia, tagar Opening Ceremony Asian Para Games 2018 menjadi trending topic sejak pukul 19.30 WIB.
+				Pengguna Twitter Indonesia juga membuat tagar Dukung APG 2018. Tak hanya itu, tagar Opening Ceremony Asian Para Games 2018 juga masuk dalam daftar trending topic dunia. Hingga pukul 22.30 WIB, tagar tersebut berada di posisi ketujuh worldwide.
+				Indonesia menambah satu gol melalui Febri di menit ke-69. Tendangan jarak jauh dari Febri menggetarkan gawang Kamboja.</p>
+				<p>Pada umumnya, masyarakat memuji acara pembukaan yang berlangsung meriah dan penuh makna untuk mendukung perjuangan atlet difabel dalam ajang ini.
+				Selain itu, acara pembukaan juga menampilkan budaya Indonesia yang dipadukan dengan kekayaan alam. Tak lupa, pada acara pembukaan, penonton dan atlet juga mengheningkan cipta untuk korban gempa Palu dan Donggala.</p>
+				<p>Asian Para Games 2018 melibatkan 3000 atlet dari 43 negara. Ajang ini dipusatkan di Komplek Gelora Bung Karno hingga 16 Oktober mendatang.</p>
+			</div>
+			<div class="footer">
+				<p id="pfooter">Copyright &copy; 2018 Bola.com</p>
+			</div>
+		</div>
+	</body>
+</html>
