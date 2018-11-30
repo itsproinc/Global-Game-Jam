@@ -1,0 +1,53 @@
+.login {
+	width: 280px;
+	height: 250px;
+	background-color: skyblue;
+	margin: 0 auto;
+	position: relative;
+}
+
+.ghost {
+	width: 200px;
+	padding: 8px;
+	color: #fff;
+	border: 1px solid #fff;
+	text-align: center;
+	outline: 1px solid black;
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: black;
+	cursor: hand;
+}
+
+.center {
+	margin: 0 auto;
+	width: 200px;
+}
+
+.user {
+	width: 120px;
+	margin: 0 auto;
+}
+
+.user img {
+	width: 100px;
+}
+
+.btn {
+	width: 120px;
+	padding: 8px;
+	border: 1px solid black;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+}
+
+.xbtn {
+	float: right;
+}
+
+.login .xbtn img {
+	width: 30px;
+	border-radius: 100px;
+	border: 1px solid black;
+}

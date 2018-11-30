@@ -1,0 +1,52 @@
+body {
+	background-color: aqua;
+	font-family: georgia;
+}
+
+h1 {
+	font-family: comic sans ms;
+	font-size: 60px;
+	color: darkblue;
+	text-align: center;
+}
+
+h4 {
+	text-align: right;
+	font-style: italic;
+}
+
+p.textOrange {
+	color: orange;
+}
+
+p.center {
+	text-align: center;
+	vertical-align: middle;	
+}
+
+p.textOrange {
+	color: orange;
+}
+
+p.spacing {
+	text-align: right;	
+	line-height: 2;
+}
+
+.textPutih {
+	color: white;
+}
+
+.textPutih:hover {
+	color:red;
+	text-decoration: none;	
+}
+
+.linkFB  {
+	text-decoration: none;
+}
+
+.linkFB:hover {
+	background-color: blue;
+	color: white;
+}
