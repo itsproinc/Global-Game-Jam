@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bersow Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+</head>
+<body id="home" class="scrollspy">
+    <!-- Video Container -->
+    <section class="video-container">
+        <video src="assets/videos/BannerVideo.mp4" playsinline autoplay muted loop> </video>
+
+        <!-- Navbar -->
+        <nav class="transparent">
+            <div class="nav-wrapper">
+                <a href="#home" class="brand-logo">Bersow Games</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Jumbotron -->
+        <div class="slider">
+            <ul class="slides transparent">
+                <li>
+                    <img src="" alt="">
+                    <div class="caption left-align">
+                        <h3 class="light white-text">Bersow Games</h3>
+                        <h5 class="light white-text">Two-man Indie Game Company</h5>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="caption right-align">
+                        <h3 class="light white-text">Founded by</h3>
+                        <h5 class="light white-text">Bakhtiar & Siong Yhi</h5>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="caption center-align">
+                        <h3 class="light white-text">Based in</h3>
+                        <h5 class="light white-text">Indonesia & Malaysia</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <!-- About Us -->
+    <section class="about scrollspy" id="about">
+        <div class="container">
+            <div class="row">              
+                <div class="col m6 light">
+                    <h3 class="center light">About Us</h3>
+                    <p>Bersow Games an indie game development company founded and ran by two people. It was originally founded in 2013 under a different name by Bakhtiar, the lead coder and Siong Yhi, the lead artist and lead animator.</p>
+                    <p>company name is derived from a combination of the proto-Germanic rune of ‘Berkana’ and ‘Sowilō’, we chose to derive our name from ‘Berkana’ and ‘Sowilō’ because it represented a good start and success in our work respectively. We came to the conclusion of choosing this name after weeks of thinking of a meaningful name.</p>
+                </div>
+
+                <div class="col m6 light">
+                    <h3 class="center light">Our Progress</h3>
+                    <h6 class="center light"><i class="material-icons red-text">block</i> Hiatus <i class="material-icons blue-text">check</i> On Progress</h6>
+                    <p class="center">Ravendawn Defense (PC)</p>
+                    <div class="progress">
+                        <div class="determinate determinate-go" style="width: 5%"></div>
+                    </div>
+    
+                    <p class="center">Hacker Tapper (Android)</p>
+                    <div class="progress">
+                        <div class="determinate determinate-stop" style="width: 85%"></div>
+                    </div>
+  
+                    <p class="center">Neon Cubes (Android)</p>
+                    <div class="progress">
+                        <div class="determinate determinate-stop" style="width: 45%"></div>
+                    </div>
+
+                    <p class="center">The Final Artifact (PC)</p>
+                    <div class="progress">
+                        <div class="determinate determinate-stop" style="width: 15%"></div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Link to object-fit-video -->
+    <!-- Special thanks to: https://github.com/TricomB2B/object-fit-videos -->
+    <script src="js/object-fit-videos/object-fit-videos.js"></script>
+
+    <script>
+        objectFitVideos();
+
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+        const slider = document.querySelectorAll('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+
+            height: 500,
+            transition: 700,
+            interval: 3000
+        });
+    </script>
+</body>
+</html>

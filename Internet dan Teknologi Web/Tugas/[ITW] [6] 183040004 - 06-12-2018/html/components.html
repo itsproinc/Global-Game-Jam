@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body id="home" class="scrollspy">
+
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="red darken-2">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="../home.html" class="brand-logo">Materialize</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="about.html">About</a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Components<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Dropdown -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#badges">Badges</a></li>
+        <li class="divider"></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li class="divider"></li>
+        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+        <li class="divider"></li>
+        <li><a href="#collections">Collections</a></li>
+        <li class="divider"></li>
+        <li><a href="#pagination">Pagination</a></li>
+        <li class="divider"></li>
+        <li><a href="#preloader">Preloader</a></li>
+    </ul>
+
+    <!-- Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="about.html">About</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <section class="components">
+        <!-- Badges -->
+        <div class="row grey lighten-3 scrollspy" id="badges">
+            <h3 class="light center grey-text text-darken-3"><b>Badges</b></h3>
+            <h6 class="light center grey-text text-darken-3">Badges can notify you that there are new or unread messages or notifications. Add the new class to the badge to give it the background.</h6>
+
+            <div class="container">
+                <div class="collection">
+                    <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+                    <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+                    <a href="#!" class="collection-item">Alan</a>
+                    <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+                </div>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Badges in dropdown</h3>
+            <div class="container center">
+                <ul id="dropdown2" class="dropdown-content">
+                    <li><a href="#!">one<span class="badge">1</span></a></li>
+                    <li><a href="#!">two<span class="new badge">1</span></a></li>
+                    <li><a href="#!">three</a></li>
+                </ul>
+                
+                <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Badges in Navbar</h3>
+            <div class="container">
+                <nav>
+                    <div class="nav-wrapper">
+                      <a href="" class="brand-logo">Logo</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="">sass</a></li>
+                            <li><a href="">sass <span class="new badge">4</span></a></li>
+                            <li><a href="">sass</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Badges in Collapsibles</h3>
+            <div class="container">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i>
+                            First
+                            <span class="new badge">4</span></div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">place</i>
+                            Second
+                            <span class="badge">1</span></div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="row scrollspy" id="buttons">
+            <h3 class="light center grey-text text-darken-3"><b>Buttons</b></h3>
+            <h6 class="light center grey-text text-darken-3">There are 3 main button types described in material design. The raised button is a standard button that signify actions and seek to give depth to a mostly flat page. The floating circular action button is meant for very important functions. Flat buttons are usually used within elements that already have depth like cards or modals..</h6>
+
+            <h3 class="light center grey-text text-darken-3">Raised</h3>
+            <div class="container center">
+                <a class="waves-effect waves-light btn">button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Floating</h3>
+            <div class="container center">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Flat</h3>
+            <h6 class="light center grey-text text-darken-3">Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</h6>
+            <div class="container center">
+                <a class="waves-effect waves-teal btn-flat">Button</a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Submit Button</h3>
+            <h6 class="light center grey-text text-darken-3">When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit</h6>
+            <div class="container center">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Large</h3>
+            <h6 class="light center grey-text text-darken-3">This button has a larger height for buttons that need more attention.</h6>
+            <div class="container center">
+                <a class="waves-effect waves-light btn-large">Button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Small</h3>
+            <h6 class="light center grey-text text-darken-3">When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</h6>
+            <div class="container center">
+                <a class="waves-effect waves-light btn-small">Button</a>
+                <a class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn-small"><i class="material-icons right">cloud</i>button</a>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Disabled</h3>
+            <h6 class="light center grey-text text-darken-3">This style can be applied to all button types</h6>
+            <div class="container center">
+                <a class="btn-large disabled">Button</a>
+                <a class="btn disabled">Button</a>
+                <a class="btn-flat disabled">Button</a>
+                <a class="btn-floating disabled"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="row grey lighten-3 scrollspy" id="breadcrumbs">
+            <h3 class="light center grey-text text-darken-3"><b>Breadcrumbs</b></h3>
+            <h6 class="light center grey-text text-darken-3">Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.</h6>
+
+            <div class="container center">
+                <nav>
+                    <div class="nav-wrapper">
+                      <div class="col s12">
+                        <a href="#!" class="breadcrumb">First</a>
+                        <a href="#!" class="breadcrumb">Second</a>
+                        <a href="#!" class="breadcrumb">Third</a>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+
+            <br>
+        </div>
+
+        <!-- Cards -->
+        <div class="row scrollspy" id="cards">
+            <h3 class="light center grey-text text-darken-3"><b>Cards</b></h3>
+            <h6 class="light center grey-text text-darken-3">Cards are a convenient means of displaying content composed of different types of objects. They’re also well-suited for presenting similar objects whose size or supported actions can vary considerably, like photos with captions of variable length.</h6>
+
+            <h3 class="light center grey-text text-darken-3">Basic Cards</h3>
+            <div class="container center">
+                <div class="row">
+                    <div class="col s6 m6 offset-m3 offset-s3">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">Card Title</span>
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">This is a link</a>
+                          <a href="#">This is a link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Image Card</h3>
+            <h6 class="light center grey-text text-darken-3">Here is the standard card with an image thumbnail.</h6>
+            <div class="container center">
+                <div class="row">
+                    <div class="col s6 m6 offset-m3 offset-s3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="../assets/img/sample-1.jpg">
+                          <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">This is a link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+            <h3 class="light center grey-text text-darken-3">FABs in Card</h3>
+            <h6 class="light center grey-text text-darken-3">Here is an image card with a Floating Action Button.</h6>
+            <div class="container center">
+                <div class="row">
+                    <div class="col s6 m6 offset-m3 offset-s3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="../assets/img/sample-1.jpg">
+                          <span class="card-title">Card Title</span>
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Horizontal Card</h3>
+            <h6 class="light center grey-text text-darken-3">Here is the standard card with a horizontal image.</h6>
+            <div class="col s6 m6 offset-m3 offset-s3">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="../assets/img/sample-1.jpg">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="light center grey-text text-darken-3">Card Reveal</h3>
+            <h6 class="light center grey-text text-darken-3">Here you can add a card that reveals more information once clicked. Just add the card-reveal div with a  span.card-title inside to make this work. Add the class activator to an element inside the card to allow it to open the card reveal.</h6>
+            <div class="container center">
+                <div class="col s6 m6 offset-m3 offset-s3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="../assets/img/sample-1.jpg">
+                        </div>
+                        <div class="card-content">
+                          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                          <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>   
+            
+            <h3 class="light center grey-text text-darken-3">Card Panel</h3>
+            <h6 class="light center grey-text text-darken-3">For a simpler card with less markup, try using a card panel which just has padding and a shadow effect
+            </h6>
+            <div class="container center">
+                <div class="row">
+                    <div class="col s6 m6 offset-m3 offset-s3">
+                      <div class="card-panel teal">
+                        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                        </span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <div class="row grey lighten-3 scrollspy" id="collections">
+        <h3 class="light center grey-text text-darken-3"><b>Collections</b></h3>
+        <h6 class="light center grey-text text-darken-3">Collections allow you to group list objects together.</h6>
+
+        <h3 class="light center grey-text text-darken-3">Basic</h3>
+        <div class="container center">
+            <ul class="collection">
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+            </ul>    
+        </div>    
+
+        <h3 class="light center grey-text text-darken-3">Links</h3>
+        <div class="container center">
+            <div class="collection">
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item active">Alvin</a>
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item">Alvin</a>
+              </div>
+        </div>  
+        
+        <h3 class="light center grey-text text-darken-3">Headers</h3>
+        <div class="container center">
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>First Names</h4></li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+              </ul>
+        </div>    
+        
+        <h3 class="light center grey-text text-darken-3">Secondary Contents</h3>
+        <div class="container center">
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>First Names</h4></li>
+                <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+              </ul>
+        </div> 
+
+        <h3 class="light center grey-text text-darken-3">Avatar Content</h3>
+        <div class="container center">
+            <ul class="collection">
+                <li class="collection-item avatar">
+                  <img src="assets/img/yuna.jpg" alt="" class="circle">
+                  <span class="title">Title</span>
+                  <p>First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle">folder</i>
+                  <span class="title">Title</span>
+                  <p>First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle green">insert_chart</i>
+                  <span class="title">Title</span>
+                  <p>First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle red">play_arrow</i>
+                  <span class="title">Title</span>
+                  <p>First Line <br>
+                     Second Line
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+              </ul>
+        </div> 
+    </div>
+    
+    <!-- Pagination -->
+    <div class="row scrollspy" id="pagination">
+        <h3 class="light center grey-text text-darken-3"><b>Pagination</b></h3>
+        <h6 class="light center grey-text text-darken-3">dd pagination links to help split up your long content into shorter, easier to understand blocks.</h6>
+
+        <div class="container center">
+            <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+              </ul>            
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="row grey lighten-3 scrollspy" id="preloader">
+        <h3 class="light center grey-text text-darken-3"><b>Preloader</b></h3>
+        <h6 class="light center grey-text text-darken-3">If you have content that will take a long time to load, you should give the user feedback. For this reason we provide a number activity + progress indicators.</h6>
+
+        <h3 class="light center grey-text text-darken-3">Linear</h3>
+        <h6 class="light center grey-text text-darken-3">There are a couple different types of linear progress bars.</h6>
+        <h5 class="light center grey-text text-darken-3">Determinate</h5>
+        <div class="container center">
+            <div class="progress">
+                <div class="determinate" style="width: 70%"></div>
+            </div>          
+        </div> 
+
+        <h5 class="light center grey-text text-darken-3">Indeterminate</h5>
+        <div class="container center">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>         
+        </div> 
+
+        <h3 class="light center grey-text text-darken-3">Circular</h3>
+        <h6 class="light center grey-text text-darken-3">There are 4 colors and 3 sizes of circular spinners. The spinner should be nested in a  preloader-wrapper div. The default size is medium, but you can add the classes big or small to adjust the size accordingly. You can add the classes spinner-red-only, spinner-blue-only,  spinner-yellow-only and spinner-green-only. You can also leave this class as just  spinner-layer and it will be set to the $spinner-default-color variable in our variables.scss file.</h6>
+        <h5 class="light center grey-text text-darken-3">Colors</h5>
+        <div class="container center">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-red-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>       
+        </div> 
+
+        <h5 class="light center grey-text text-darken-3">Circular Flashing Colors</h5>
+        <div class="container center">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+          
+                <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="red darken-2 white-text center">
+        <p class="flow-text">Materialize. Copyright 2018</p>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+    <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+        const dropdown = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(dropdown);
+
+        const collapsible = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(collapsible);
+
+        const scrollSpy = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(scrollSpy, {
+            throttle: 200,
+            scrollOffset: 65
+        });
+    </script>
+</body>
+</html>

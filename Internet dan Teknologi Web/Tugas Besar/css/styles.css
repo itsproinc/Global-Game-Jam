@@ -1,0 +1,38 @@
+.video-container {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: inherit;
+  }
+
+@media(min-width: 600px) {
+    height: 100vh;
+}
+  
+video {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    padding: 0px 10px;
+}
+
+.caption {
+    padding-top: 5%;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.determinate-stop {
+    background-color:red !important;
+}
+
+.determinate-go {
+    background-color: blue !important;
+}
