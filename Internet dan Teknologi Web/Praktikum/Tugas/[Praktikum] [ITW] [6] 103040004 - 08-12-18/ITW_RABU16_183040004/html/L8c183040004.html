@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Latihan 8c</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <script>
+        var pilihanUser = prompt("Apakah kamu pilih 'gajah', 'orang' atau 'semut'?");
+
+        if(pilihanUser == "gajah")
+            Go(pilihanUser);
+        else if(pilihanUser == "orang")
+            Go(pilihanUser);
+        else if(pilihanUser == "semut")
+            Go(pilihanUser);
+        else
+            alert("Value yang anda input bukan 'gajah', 'orang' atau 'semut', silahkan refresh page!")
+
+        function Go(pilihanUser) {
+            var PU = pilihanUser;
+            var PK = PilihanKomputer();
+
+            if(PU == "gajah")
+            {
+                if(PK == "gajah")
+                    alert ("Komputer memilih: " + PK + ", tidak ada yang menang");
+                else if(PK == "orang")
+                    alert ("Komputer memilih: " + PK + ", kamu menang");
+                else if(PK == "semut")
+                    alert ("Komputer memilih: " + PK + ", kamu kalah");
+            }
+
+            if(PU == "orang")
+            {
+                if(PK == "orang")
+                    alert ("Komputer memilih: " + PK + ", tidak ada yang menang");
+                else if(PK == "semut")
+                    alert ("Komputer memilih: " + PK + ", kamu menang");
+                else if(PK == "gajah")
+                    alert ("Komputer memilih: " + PK + ", kamu kalah");
+            }
+
+            if(PU == "semut")
+            {
+                if(PK == "semut")
+                    alert ("Komputer memilih: " + PK + ", tidak ada yang menang");
+                else if(PK == "gajah")
+                    alert ("Komputer memilih: " + PK + ", kamu menang");
+                else if(PK == "orang")
+                    alert ("Komputer memilih: " + PK + ", kamu kalah");
+            }
+        }
+
+        function PilihanKomputer() {
+            var pilihanComputer = Math.random();
+
+            if(pilihanComputer < 0.34)
+                return "gajah";
+            else if (pilihanComputer <= 0.67)
+                return "orang";
+            else
+                return "semut";
+        }       
+    </script>
+</body>
+</html>

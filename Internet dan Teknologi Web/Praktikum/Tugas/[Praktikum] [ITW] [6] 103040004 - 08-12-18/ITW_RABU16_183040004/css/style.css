@@ -1,0 +1,158 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial'
+}
+
+pre {
+	border-radius: 5px;
+	border: 1px solid #010101;
+	padding: 1px;
+	background: #dedfdf
+}
+
+.dark{
+	background: #046380;
+}
+
+.wrapper {
+	width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 0px;
+	overflow: auto;
+}
+
+.navbar{
+	/*border-bottom: 1px solid #046380;*/
+	background: #046380;
+	min-height: 100px;
+	margin: 0;
+	position: relative;
+	z-index: 1000;
+
+}
+
+.navbar::after{
+	margin:0;
+}
+
+.navbar-menu{
+	box-sizing: border-box;
+	margin: 0px;
+
+}
+
+.right{
+	float: right;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	margin:0;
+	padding: 0;
+
+}
+
+a{
+	text-decoration: none;
+	color:#FFFFFF;
+	position: relative;
+	line-height: 110px;
+	padding: 0 15px;
+	height: 110px;
+	text-transform: uppercase;
+	color:#E6E2AF;
+	/*background: red;*/
+}
+
+.title-primary{
+	font-size: 25pt;
+	color:#EFECCA;
+	font-weight: bold;
+
+}
+
+.cover{
+	box-sizing:border-box;
+	
+	/*line-height: 200px;*/
+	height: 420px;
+	background: #046380;
+	margin-top: -20px;
+	/*margin-bottom: -20px;*/
+	position: relative;
+	padding-top: 30px;
+	color:#FFFFFF;
+}
+
+.cover::after{
+	color:#FFFFFF;
+	/*content: "<p>Ini cover website</p>";*/
+}
+
+.cover > .wrapper{
+	text-align: center;
+}
+
+.footer{
+	background: #002F2F;
+	line-height: 100px;
+	/*height: 200px;*/
+	/*position: absolute;
+	width: 100%;
+	bottom:0;
+	right: 0;*/
+}
+
+.navbar-menu-footer{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.div2{
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+.content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.btn{
+	padding:15px;
+
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.lowercase{
+	text-transform: lowercase;
+}
+
+.navbar-fixed{
+	position: fixed;
+	background: #002F2F;
+	width: 100%;
+	top:0;
+	left: 0;
+	/*height: 50px;*/
+
+}
+
+.form-input{
+	width: 100%;
+	padding: 10px;
+	/*border-radius: 15px;*/
+	font-size: 16pt;
+
+}

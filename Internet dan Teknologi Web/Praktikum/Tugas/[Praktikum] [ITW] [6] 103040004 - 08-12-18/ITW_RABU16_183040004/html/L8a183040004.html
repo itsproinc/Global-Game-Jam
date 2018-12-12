@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Latihan 8a</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <script>
+        var nilai = prompt("Masukkan nilai anda");
+
+        if(nilai == null || nilai == "")
+            alert("Tidak ada value yang di input, silahkan refresh page!")
+        else {
+            alert("Nilai = " + nilai + ", maka gradenya = " + CalcGrade(nilai));
+        }
+
+        function CalcGrade(nilai) {
+            if(nilai >= 85)
+                return "A";
+            if(nilai >= 75)
+                return "B";
+            if(nilai >= 65)
+                return "C";
+            if(nilai >= 40)
+                return "D";
+			else
+				return "E";
+        }
+
+    </script>
+</body>
+</html>
