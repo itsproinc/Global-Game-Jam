@@ -6,9 +6,8 @@
     <title>Bersow Games</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/fontawesome-free-5.5.0-web/css/all.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 
@@ -19,14 +18,14 @@
         <video src="assets/videos/BannerVideo.mp4" playsinline autoplay muted loop> </video>
 
         <!-- Navbar -->
-        <nav class="transparent">
+        <nav id="header">
             <div class="nav-wrapper">
                 <a href="#home" class="brand-logo">Bersow Games</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#ourgame">Our Game</a></li>
+                    <li><a href="#portfolio">Developers</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -63,57 +62,242 @@
     <!-- Sidenav -->
     <ul class="sidenav" id="mobile-demo">
         <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#ourgame">Our Game</a></li>
+        <li><a href="#portfolio">Developers</a></li>
         <li><a href="#contact">Contact Us</a></li>
     </ul>
 
     <!-- About Us -->
-    <section class="about scrollspy" id="about">
-        <div class="container">
-            <div class="row">              
-                <div class="col m6 light">
-                    <h3 class="center light">About Us</h3>
-                    <p>Bersow Games an indie game development company founded and ran by two people. It was originally founded in 2013 under a different name by Bakhtiar, the lead coder and Siong Yhi, the lead artist and lead animator.</p>
-                    <p>company name is derived from a combination of the proto-Germanic rune of ‘Berkana’ and ‘Sowilō’, we chose to derive our name from ‘Berkana’ and ‘Sowilō’ because it represented a good start and success in our work respectively. We came to the conclusion of choosing this name after weeks of thinking of a meaningful name.</p>
+    <section class="scrollspy even" id="aboutus_sect">
+        <div class="container" id="aboutus">
+            <h3 class="center light">About Us</h3>
+            <p>Bersow Games an indie game development company founded and ran by two people. It was originally founded in 2013 under a different name by Bakhtiar, the lead coder and Siong Yhi, the lead artist and lead animator.</p>
+            <p>company name is derived from a combination of the proto-Germanic rune of ‘Berkana’ and ‘Sowilō’, we chose to derive our name from ‘Berkana’ and ‘Sowilō’ because it represented a good start and success in our work respectively. We came to the conclusion of choosing this name after weeks of thinking of a meaningful name.</p>
+        </div>
+    </section>
+
+    <!-- Our Games -->
+    <section class="scrollspy odd" id="ourgames_sect">
+        <div class="container" id="ourgames">
+            <h3 class="center light">Our Games</h3>
+            
+            <div class="row">
+                <!-- Outpost Echo -->
+                <div class="col m4 s12 offset-m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="assets/img/portfolio/ProjectEcho.png">
+                        </div>
+                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Outpost Echo<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                            <br><p>Progress</p>
+                            <div class="progress">
+                                <div class="determinate" style="width: 5%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Outpost Echo<i style="float: right;" class="fas fa-times"></i></span>
+                            <p>Outpost Echo is our take on a tower defense game with our very own twists. Work towards a safer land as you build traps, build walls, gather resources and expand to compensate for more and more buildings needed to keep up the defense against the enemies.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col m6 light">
-                    <h3 class="center light">Our Progress</h3>
-                    <h6 class="center light"><i class="material-icons red-text">block</i> Hiatus <i class="material-icons blue-text">check</i> On Progress</h6>
-                    <p class="center">Ravendawn Defense (PC)</p>
-                    <div class="progress">
-                        <div class="determinate determinate-go" style="width: 5%"></div>
+                <!-- Neon Cubes -->
+                <div class="col m4 s12">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="assets/img/portfolio/NeonCubes.png">
+                        </div>
+                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Neon Cubes<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                            <br><p>Progress</p>
+                            <div class="progress">
+                                <div class="determinate" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Neon Cubes<i style="float: right;" class="fas fa-times"></i></span>
+                            <p>Neon Cubes is a top-down-shooter where you as a cube try to escape the facility and evacute the area immediately, but there will be fighting on your way so equip and be prepare to fight.</p>
+                        </div>
                     </div>
-    
-                    <p class="center">Hacker Tapper (Android)</p>
-                    <div class="progress">
-                        <div class="determinate determinate-stop" style="width: 85%"></div>
-                    </div>
-  
-                    <p class="center">Neon Cubes (Android)</p>
-                    <div class="progress">
-                        <div class="determinate determinate-stop" style="width: 45%"></div>
+                </div>
+            <div>
+
+            <div class="row">
+                <!-- Neon Cubes -->
+                <div class="col m4 s12 offset-m2">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/portfolio/NeonCubes.png">
+                            </div>
+                            
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Neon Cubes<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                                <br><p>Progress</p>
+                                <div class="progress">
+                                    <div class="determinate" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Neon Cubes<i style="float: right;" class="fas fa-times"></i></span>
+                                <p>Neon Cubes is a top-down-shooter where you as a cube try to escape the facility and evacute the area immediately, but there will be fighting on your way so equip and be prepare to fight.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <p class="center">The Final Artifact (PC)</p>
-                    <div class="progress">
-                        <div class="determinate determinate-stop" style="width: 15%"></div>
+                <!-- Hacker Tapper -->
+                <div class="col m4 s12">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="assets/img/portfolio/HackerTapper.png">
+                        </div>
+                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Hacker Tapper<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                            <br><p>Progress</p>
+                            <div class="progress">
+                                <div class="determinate" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Hacker Tapper<i style="float: right;" class="fas fa-times"></i></span>
+                            <p>Hacker tapper is a classic tap tycoon game where you earn money by tapping the screen and not to forget the further you are the harder the enemies, thats where you need to save up and upgrade your weapon and armor to advance the game.</p>
+                        </div>
                     </div>
-                </div>            
+                </div>                
+            </div>
+
+            <div class="row">
+                <!-- Rogue Intelligence -->
+                <div class="col m4 s12 offset-m2">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="assets/img/portfolio/RogueIntelligence.png">
+                        </div>
+                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Rogue Intelligence<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                            <br><p>Progress</p>
+                            <div class="progress">
+                                <div class="determinate" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Rogue Intelligence<i style="float: right;" class="fas fa-times"></i></span>
+                            <p>Rogue Intelligence is a tap tycoon game where you tap the crystal to earn money, with the money collected you can upgrade your crystal so that it will drop more cash per click. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Final Artifact -->
+                <div class="col m4 s12">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="assets/img/portfolio/TheFinalArtifact.png">
+                        </div>
+                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">The Final Artifact<i style="float: right;" class="fas fa-ellipsis-v"></i></span>
+                            <br><p>Progress</p>
+                            <div class="progress">
+                                <div class="determinate" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">The Final Artifact<i style="float: right;" class="fas fa-times"></i></span>
+                            <p>The Final Artifact is a rogue like dungeon crawler game where the dungeon are randomly generated and you have to survive in the dungeon as long as you can.</p>
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
     </section>
 
+    <!-- Developers -->
+    <section class="scrollspy even" id="developers_sect">
+        <div class="container" id="developers">
+            <h3 class="center light">Meet the Devs</h3>
+
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card large">
+                        <div class="card-image">
+                            <img src="assets/img/itsproinc logo.png">
+                            <span class="card-title">Bakhtiar "Itsproinc"</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Bakhtiar "Itsproinc" is one of the founder of Bersow Games, he is the lead programmer of Bersow Games.</p>
+                        </div>
+                        <div class="card-action">
+                            <div class="col m12 s12">
+                                <i class="fab fa-facebook" style="color:darkblue;"></i><a href="https://www.facebook.com/itsproinc" style="color:darkblue;" target="_blank"> itsproinc</a>
+                            </div>
+                            
+                            <div class="col m12 s12">
+                                <i class="fab fa-instagram" style="color:purple;"></i><a href="https://www.instagram.com/bakh.tiar" style="color:purple;" target="_blank"> bakh.tiar</a>
+                            </div>
+                                
+                            <div class="col m12 s12">
+                                <i class="fab fa-youtube" style="color:red;"></i><a href="https://www.youtube.com/itsproinc" style="color:red;" target="_blank"> itsproinc</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6">
+                        <div class="card large">
+                            <div class="card-image">
+                                <img src="assets/img/tint logo.png">
+                                <span class="card-title">Siong Yhi "Tint"</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Siong Yhi "Tint" is one of the founder of Bersow Games, he is the lead artist, lead animator of Bersow Games.</p>
+                            </div>
+                            <div class="card-action">
+                                <div class="col m12 s12">
+                                    <i class="fab fa-facebook" style="color:darkblue;"></i><a href="https://www.facebook.com/siong.yhi.3" style="color:darkblue;" target="_blank"> Siong Yhi</a>
+                                </div>
+
+                                <div class="col m12 s12">
+                                    <i class="fab fa-instagram" style="color:purple;"></i><a href="https://www.instagram.com/siongyhi/" style="color:purple;" target="_blank"> siongyhi</a>
+                                </div>
+                                    
+                                <div class="col m12 s12">
+                                    <i class="fab fa-youtube" style="color:red;"></i><a href="https://www.youtube.com/channel/UCGkJxQz_m17DWzkCuZJ8rHQ" style="color:red;" target="_blank"> Tint</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="scrollspy odd" id="contactus">
+        <div class="container">
+                <h3 class="center light">Contact Us</h3>
+    </section>
+    
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!-- Link to object-fit-video -->
     <!-- Special thanks to: https://github.com/TricomB2B/object-fit-videos -->
     <script src="js/object-fit-videos/object-fit-videos.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Special thanks to: https://github.com/customd/jquery-visible -->
+    <script src="js/jquery.visible.js"></script>
 
     <script>
-        objectFitVideos();
-
+        objectFitVideos(); // Load objectfitvideos plugin
+        
         const sideNav = document.querySelectorAll('.sidenav');
         M.Sidenav.init(sideNav);
 
@@ -125,6 +309,77 @@
             transition: 700,
             interval: 3000
         });
+
+        window.onscroll = function() {UpdatePage()};
+        window.onloadstart = function() {UpdatePage()}; // Load UpdatePage() on start  
+        aboutus.classList.add("sectionfadein"); 
+            
+        function UpdatePage() {
+            // Navbar
+            var header = document.getElementById("header");
+            if(window.pageYOffset > header.offsetTop)
+                header.classList.add("fadein");
+            else if(header.classList.contains("fadein"))
+                header.classList.add("fadeout");  
+
+            // Sections
+            // About Us
+            var aboutus = document.getElementById("aboutus");            
+            if ($('#aboutus_sect').visible(true))
+                aboutus.classList.add("sectionfadein");
+            if (($('#aboutus_sect').visible(true)) === false && aboutus.classList.contains("sectionfadein"))
+                aboutus.classList.add("sectionfadeout"); 
+
+            // Our Games
+            var ourgames = document.getElementById("ourgames");            
+            if ($('#ourgames_sect').visible(true))
+                ourgames.classList.add("sectionfadein");
+            if (($('#ourgames_sect').visible(true)) === false && ourgames.classList.contains("sectionfadein"))
+                ourgames.classList.add("sectionfadeout"); 
+
+             // Developers
+            var developers = document.getElementById("developers");            
+            if ($('#developers_sect').visible(true))
+                developers.classList.add("sectionfadein");
+            if (($('#developers_sect').visible(true)) === false && developers.classList.contains("sectionfadein"))
+                developers.classList.add("sectionfadeout"); 
+        }
+
+        window.ontransitionend = function() {DeleteClass()};
+        function DeleteClass() {
+            if(header.classList.contains("fadein") && header.classList.contains("fadeout"))
+            {
+                header.classList.remove("fadein");
+                header.classList.remove("fadeout");
+                UpdatePage();
+            }
+        }
+
+        window.onanimationend = function() {DeleteClass2()};
+        function DeleteClass2() {
+            // About Us
+            if(aboutus.classList.contains("sectionfadein") && aboutus.classList.contains("sectionfadeout"))
+            {
+                aboutus.classList.remove("sectionfadein");
+                aboutus.classList.remove("sectionfadeout");          
+            }       
+
+            // Our Games
+            if(ourgames.classList.contains("sectionfadein") && ourgames.classList.contains("sectionfadeout"))
+            {
+                ourgames.classList.remove("sectionfadein");
+                ourgames.classList.remove("sectionfadeout");           
+            }
+
+            // Developers
+            if(developers.classList.contains("sectionfadein") && developers.classList.contains("sectionfadeout"))
+            {
+                developers.classList.remove("sectionfadein");
+                developers.classList.remove("sectionfadeout");           
+            }
+            
+            UpdatePage();   
+        }
     </script>
 </body>
 </html>

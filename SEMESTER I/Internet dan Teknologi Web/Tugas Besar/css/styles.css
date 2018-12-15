@@ -1,13 +1,12 @@
 .video-container {
-    height: 70vh;
+    height: 65vh;
     position: relative;
     overflow: hidden;
     padding-bottom: inherit;
+    
+    opacity: 1;
+    left: 0;
   }
-
-@media(min-width: 600px) {
-    height: 100vh;
-}
   
 video {
     object-fit: cover;
@@ -20,8 +19,14 @@ video {
 }
 
 nav {
+    position: fixed;
+    background-color: transparent;
+    padding: 0px 20px;
+    
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    padding: 0px 10px;
+    left: 0;
+    top: 0;
+    z-index: 9998;
 }
 
 .caption {
@@ -29,10 +34,58 @@ nav {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.determinate-stop {
-    background-color:red !important;
+section {
+    padding: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
-.determinate-go {
-    background-color: blue !important;
+.sidenav {
+    z-index: 9999;
+}
+
+.fadein {
+    background-color: rgba(78, 105, 138, 255);
+    transition: background-color 0.5s linear;
+}
+
+.fadeout {
+    background-color: transparent;
+    transition: background-color 0.5s linear;
+}
+
+.odd {
+    background-color: rgb(255, 255, 255);
+}
+
+.even {
+    background-color: rgb(225, 225 , 225);
+}
+
+.fa-ellipsis-v {
+    font-size: 15px;
+}
+
+.container {
+    transform: translate(-100vw);
+}
+
+.sectionfadein {
+    animation: sectfadein 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.sectionfadeout {
+    animation: sectfadeout 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sectfadein {
+    from {transform: translate(-100vw);}
+    to {transform: translate(0vw);}
+}
+
+@keyframes sectfadeout {
+    from {transform: translate(0vw);}
+    to {transform: translate(-100vw);}
 }
