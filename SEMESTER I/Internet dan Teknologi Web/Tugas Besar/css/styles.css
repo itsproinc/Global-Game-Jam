@@ -1,5 +1,10 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .video-container {
-    height: 65vh;
+    height: 70vh;
     position: relative;
     overflow: hidden;
     padding-bottom: inherit;
@@ -30,7 +35,7 @@ nav {
 }
 
 .caption {
-    padding-top: 5%;
+    padding: 10vh;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -40,12 +45,16 @@ section {
     margin-bottom: 20px;
 }
 
+.container, .container2 {
+    opacity: 0 !important;
+}
+
 .sidenav {
     z-index: 9999;
 }
 
 .fadein {
-    background-color: rgba(78, 105, 138, 255);
+    background-color: rgb(50, 50, 50);
     transition: background-color 0.5s linear;
 }
 
@@ -55,37 +64,178 @@ section {
 }
 
 .odd {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(75, 75, 75);
 }
 
 .even {
-    background-color: rgb(225, 225 , 225);
+    background-color: rgb(100, 100 , 100);
+}
+
+.card, .card-reveal {
+    background-color: rgb(200, 200, 200) !important;
+}
+
+.collection p {
+    background-color:rgba(200, 200, 200) !important;
+}
+
+.parallax-container{
+    margin-top: -25px;
+    height: 350px;
+    min-height: 350px;
+    padding-top: 5%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parallax {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.pText {
+    text-shadow: 3px 5px 50px rgba(0, 0, 0, 0.5);
 }
 
 .fa-ellipsis-v {
     font-size: 15px;
 }
 
-.container {
-    transform: translate(-100vw);
-}
+.aboutUs_sectionfadein {
+    animation: sectfadein 1s ease-in-out;
+    -moz-animation: sectfadein 1s ease-in-out;
+    -webkit-animation: sectfadein 1s ease-in-out;
+    -o-animation: sectfadein 1s ease-in-out;
 
-.sectionfadein {
-    animation: sectfadein 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.aboutUs_sectionfadeout {
+    animation: sectfadeout 1s ease-in-out;
+    -moz-animation: sectfadeout 1s ease-in-out;
+    -webkit-animation: sectfadeout 1s ease-in-out;
+    -o-animation: sectfadeout 1s ease-in-out;
+
     animation-fill-mode: forwards;
 }
 
-.sectionfadeout {
-    animation: sectfadeout 1.5s ease-in-out;
+.ourGames_sectionfadein {
+    animation: sectfadeinodd 1s ease-in-out;
+    -moz-animation: sectfadeinodd 1s ease-in-out;
+    -webkit-animation: sectfadeinodd 1s ease-in-out;
+    -o-animation: sectfadeinodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+}
+.ourGames_sectionfadeout {
+    animation: sectfadeoutodd 1s ease-in-out;
+    -moz-animation: sectfadeoutodd 1s ease-in-out;
+    -webkit-animation: sectfadeoutodd 1s ease-in-out;
+    -o-animation: sectfadeoutodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+}
+
+.developers_sectionfadein {
+    animation: sectfadein 1s ease-in-out;
+    -moz-animation: sectfadein 1s ease-in-out;
+    -webkit-animation: sectfadein 1s ease-in-out;
+    -o-animation: sectfadein 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+}
+.developers_sectionfadeout {
+    animation: sectfadeout 1s ease-in-out;
+    -moz-animation: sectfadeout 1s ease-in-out;
+    -webkit-animation: sectfadeout 1s ease-in-out;
+    -o-animation: sectfadeout 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+}
+
+.contactUs_sectionfadein {
+    animation: sectfadeinodd 1s ease-in-out;
+    -moz-animation: sectfadeinodd 1s ease-in-out;
+    -webkit-animation: sectfadeinodd 1s ease-in-out;
+    -o-animation: sectfadeinodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+}
+.contactUs_sectionfadeout {
+    animation: sectfadeoutodd 1s ease-in-out;
+    -moz-animation: sectfadeoutodd 1s ease-in-out;
+    -webkit-animation: sectfadeoutodd 1s ease-in-out;
+    -o-animation: sectfadeoutodd 1s ease-in-out;
+
     animation-fill-mode: forwards;
 }
 
 @keyframes sectfadein {
-    from {transform: translate(-100vw);}
-    to {transform: translate(0vw);}
+    from {transform: translate(100vw); opacity: 0;}
+    to {transform: translate(0vw); opacity: 1;}
+}
+@-moz-keyframes sectfadein {
+    from {-moz-transform: translate(100vw); opacity: 0;}
+    to {-moz-transform: translate(0vw); opacity: 1;}
+}
+@-webkit-keyframes sectfadein {
+    from {-webkit-transform: translate(100vw); opacity: 0;}
+    to {-webkit-transform: translate(0vw); opacity: 1;}
+}
+@-o-keyframes sectfadein {
+    from {-o-transform: translate(100vw); opacity: 0;}
+    to {-o-transform: translate(0vw); opacity: 1;}
+}
+
+@keyframes sectfadeinodd {
+    from {transform: translate(-100vw); opacity: 0;}
+    to {transform: translate(0vw); opacity: 1;}
+}
+@-moz-keyframes sectfadeinodd {
+    from {-moz-transform: translate(-100vw); opacity: 0;}
+    to {-moz-transform: translate(0vw); opacity: 1;}
+}
+@-webkit-keyframes sectfadeinodd {
+    from {-webkit-transform: translate(-100vw); opacity: 0;}
+    to {-webkit-transform: translate(0vw); opacity: 1;}
+}
+@-o-keyframes sectfadeinodd {
+    from {-o-transform: translate(-100vw); opacity: 0;}
+    to {-o-transform: translate(0vw); opacity: 1;}
 }
 
 @keyframes sectfadeout {
-    from {transform: translate(0vw);}
-    to {transform: translate(-100vw);}
+    from {transform: translate(0vw); opacity: 1;}
+    to {transform: translate(100vw); opacity: 0;}
+}
+@-moz-keyframes sectfadeout {
+    from {-moz-transform: translate(0vw); opacity: 1;}
+    to {-moz-transform: translate(100vw); opacity: 0;}
+}
+@-webkit-keyframes sectfadeout {
+    from {-webkit-transform: translate(0vw); opacity: 1;}
+    to {-webkit-transform: translate(100vw); opacity: 0;}
+}
+
+@-o-keyframes sectfadeout {
+    from {-o-transform: translate(0vw); opacity: 1;}
+    to {-o-transform: translate(100vw); opacity: 0;}
+}
+
+@keyframes sectfadeoutodd {
+    from {transform: translate(0vw); opacity: 1;}
+    to {transform: translate(-100vw); opacity: 0;}
+}
+@-moz-keyframes sectfadeoutodd {
+    from {-moz-transform: translate(0vw); opacity: 1;}
+    to {-moz-transform: translate(-100vw); opacity: 0;}
+}
+@-webkit-keyframes sectfadeoutodd {
+    from {-webkit-transform: translate(0vw); opacity: 1;}
+    to {-webkit-transform: translate(-100vw); opacity: 0;}
+}
+@-o-keyframes sectfadeoutodd {
+    from {-o-transform: translate(0vw); opacity: 1;}
+    to {-o-transform: translate(-100vw); opacity: 0;}
 }
