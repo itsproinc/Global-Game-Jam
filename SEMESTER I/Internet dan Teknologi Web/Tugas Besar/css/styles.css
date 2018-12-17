@@ -1,17 +1,43 @@
 html, body {
     max-width: 100%;
+
     overflow-x: hidden;
+    
+    margin: 0;
+    padding: 0;
 }
 
 .video-container {
-    height: 70vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     padding-bottom: inherit;
     
     opacity: 1;
     left: 0;
-  }
+}
+
+.overlay-desc {
+    background: rgba(0,0,0,0);
+    color: white;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90vh;
+
+    display: flex;
+}
+
+.blink {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
   
 video {
     object-fit: cover;
@@ -21,6 +47,8 @@ video {
     width: 100%;
     top: 0;
     left: 0;
+
+    z-index: 0;
 }
 
 nav {
@@ -35,7 +63,7 @@ nav {
 }
 
 .caption {
-    padding: 10vh;
+    padding: 30vh;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -46,7 +74,11 @@ section {
 }
 
 .container, .container2 {
-    opacity: 0 !important;
+    opacity: 0;
+    transform: translate(-100vw);
+    -moz-transform: translate(-100vw);
+    -webkit-transform: translate(-100vw);
+    -o-transform: translate(-100vw);
 }
 
 .sidenav {
@@ -81,9 +113,9 @@ section {
 
 .parallax-container{
     margin-top: -25px;
-    height: 350px;
-    min-height: 350px;
-    padding-top: 5%;
+    height: 250px;
+    min-height: 250px;
+    padding-top: 2%;
     object-fit: cover;
     font-family: 'object-fit: cover;';
 
@@ -93,6 +125,10 @@ section {
 .parallax {
     filter: blur(10px);
     -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
 }
 
 .pText {
@@ -110,6 +146,8 @@ section {
     -o-animation: sectfadein 1s ease-in-out;
 
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 .aboutUs_sectionfadeout {
     animation: sectfadeout 1s ease-in-out;
@@ -117,7 +155,9 @@ section {
     -webkit-animation: sectfadeout 1s ease-in-out;
     -o-animation: sectfadeout 1s ease-in-out;
 
-    animation-fill-mode: forwards;
+    animation-fill-mode: initial;
+    -webkit-animation-fill-mode: initial;
+    -o-animation-fill-mode: initial;
 }
 
 .ourGames_sectionfadein {
@@ -127,6 +167,8 @@ section {
     -o-animation: sectfadeinodd 1s ease-in-out;
 
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 .ourGames_sectionfadeout {
     animation: sectfadeoutodd 1s ease-in-out;
@@ -134,7 +176,9 @@ section {
     -webkit-animation: sectfadeoutodd 1s ease-in-out;
     -o-animation: sectfadeoutodd 1s ease-in-out;
 
-    animation-fill-mode: forwards;
+    animation-fill-mode: initial;
+    -webkit-animation-fill-mode: initial;
+    -o-animation-fill-mode: initial;
 }
 
 .developers_sectionfadein {
@@ -144,6 +188,8 @@ section {
     -o-animation: sectfadein 1s ease-in-out;
 
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 .developers_sectionfadeout {
     animation: sectfadeout 1s ease-in-out;
@@ -151,7 +197,9 @@ section {
     -webkit-animation: sectfadeout 1s ease-in-out;
     -o-animation: sectfadeout 1s ease-in-out;
 
-    animation-fill-mode: forwards;
+    animation-fill-mode: initial;
+    -webkit-animation-fill-mode: initial;
+    -o-animation-fill-mode: initial;
 }
 
 .contactUs_sectionfadein {
@@ -161,6 +209,8 @@ section {
     -o-animation: sectfadeinodd 1s ease-in-out;
 
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 .contactUs_sectionfadeout {
     animation: sectfadeoutodd 1s ease-in-out;
@@ -168,7 +218,9 @@ section {
     -webkit-animation: sectfadeoutodd 1s ease-in-out;
     -o-animation: sectfadeoutodd 1s ease-in-out;
 
-    animation-fill-mode: forwards;
+    animation-fill-mode: initial;
+    -webkit-animation-fill-mode: initial;
+    -o-animation-fill-mode: initial;
 }
 
 @keyframes sectfadein {
@@ -238,4 +290,55 @@ section {
 @-o-keyframes sectfadeoutodd {
     from {-o-transform: translate(0vw); opacity: 1;}
     to {-o-transform: translate(-100vw); opacity: 0;}
+}
+
+::-webkit-scrollbar {
+    width: 0em;
+}
+
+#pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    list-style: none;
+    z-index: 9998;
+}
+  
+#pagination li {
+    position: relative;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+
+    transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+#pagination a {
+    position: absolute;
+    text-decoration: none;  
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+#pagination li:hover {
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+#pagination #active {
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }

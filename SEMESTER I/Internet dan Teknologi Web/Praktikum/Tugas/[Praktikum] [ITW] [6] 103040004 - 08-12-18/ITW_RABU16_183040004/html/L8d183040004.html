@@ -12,8 +12,8 @@
         var jumlah = prompt("Masukkan inputan");
         var string = "";
 
-        for (let i = 0; i < jumlah ; i++) {
-            for (let j = 0; j < i + 1; j++) {
+        for (let i = jumlah; i >= 0 ; i--) {
+            for (let j = 0; j <= i; j++) {
                 if(string == null || string == "")
                     string = "*";
                 else
