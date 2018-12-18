@@ -8,7 +8,7 @@ html, body {
 }
 
 .video-container {
-    height: 100vh;
+    height: 99vh;
     position: relative;
     overflow: hidden;
     padding-bottom: inherit;
@@ -124,8 +124,8 @@ section {
 
 .parallax {
     filter: blur(10px);
-    -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
+    -webkit-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
@@ -155,9 +155,9 @@ section {
     -webkit-animation: sectfadeout 1s ease-in-out;
     -o-animation: sectfadeout 1s ease-in-out;
 
-    animation-fill-mode: initial;
-    -webkit-animation-fill-mode: initial;
-    -o-animation-fill-mode: initial;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .ourGames_sectionfadein {
@@ -176,9 +176,9 @@ section {
     -webkit-animation: sectfadeoutodd 1s ease-in-out;
     -o-animation: sectfadeoutodd 1s ease-in-out;
 
-    animation-fill-mode: initial;
-    -webkit-animation-fill-mode: initial;
-    -o-animation-fill-mode: initial;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .developers_sectionfadein {
@@ -197,9 +197,9 @@ section {
     -webkit-animation: sectfadeout 1s ease-in-out;
     -o-animation: sectfadeout 1s ease-in-out;
 
-    animation-fill-mode: initial;
-    -webkit-animation-fill-mode: initial;
-    -o-animation-fill-mode: initial;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .contactUs_sectionfadein {
@@ -218,9 +218,9 @@ section {
     -webkit-animation: sectfadeoutodd 1s ease-in-out;
     -o-animation: sectfadeoutodd 1s ease-in-out;
 
-    animation-fill-mode: initial;
-    -webkit-animation-fill-mode: initial;
-    -o-animation-fill-mode: initial;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 @keyframes sectfadein {
@@ -329,16 +329,19 @@ section {
     height: 100%;
 }
 
-#pagination li:hover {
-    transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
+#pagination .active {
+    background-color: darkred;
+    border-radius: 100%;
 }
 
-#pagination #active {
-    transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
+.modal {
+    width: 80vw;
+    min-height: 80vh;
+}
+
+footer {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 20px 0;
+    margin-top: -20px;
 }

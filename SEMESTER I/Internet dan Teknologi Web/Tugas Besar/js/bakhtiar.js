@@ -15,12 +15,43 @@ M.Slider.init(slider, {
 const parallax = document.querySelectorAll('.parallax');
 M.Parallax.init(parallax);
 
-window.onscroll = function() {UpdatePage()};
-window.onloadstart = function() {UpdatePage()};  // Load UpdatePage() on start 
+const popup = document.querySelectorAll('.modal');
+var
+modalOn = false;
+M.Modal.init(popup, {
+    onOpenStart: LockMove,
+    onCloseEnd: UnlockMove
+});
 
+function LockMove () {
+    modalOn = true;
+    $.scrollify.disable();
+
+    document.onmousewheel = function(){ stopWheel(); } /* IE7, IE8 */
+
+    if(document.addEventListener) /* Chrome, Safari, Firefox */
+        document.addEventListener('DOMMouseScroll', stopWheel, false);
+}
+
+function UnlockMove () {
+    modalOn = false;
+    $.scrollify.enable();
+
+    document.onmousewheel = null;  /* IE7, IE8 */
+    if(document.addEventListener) /* Chrome, Safari, Firefox */
+        document.removeEventListener('DOMMouseScroll', stopWheel, false);
+}
+ 
+function stopWheel(e){
+    if(!e){ e = window.event; } /* IE7, IE8, Chrome, Safari */
+    if(e.preventDefault) { e.preventDefault(); } /* Chrome, Safari, Firefox */
+    e.returnValue = false; /* IE7, IE8 */
+}
+
+window.onscroll = function() {UpdatePage()};
 var header = document.getElementById("header");
 function UpdatePage() {
-    console.log($.scrollify.currentIndex());
+    CheckPagination();
 
     // Navbar
     if(window.pageYOffset > header.offsetTop)
@@ -93,35 +124,89 @@ $.scrollify({
 });
 
 $('.home_btn').click(function(){
-    if($.scrollify.currentIndex() != 0)
+    if($.scrollify.currentIndex() != 0 && !modalOn)
+    {
+        CheckPagination();
         $.scrollify.move("#1");
+    }
 }); 
 
 $('.aboutus_btn').click(function(){  
-    if($.scrollify.currentIndex() != 1)
+    if($.scrollify.currentIndex() != 1 && !modalOn)
+    {
+        CheckPagination();
         $.scrollify.move("#2");
+    }
 });
 
 $('.ourgames_btn').click(function(){  
-    if($.scrollify.currentIndex() != 2)
+    if($.scrollify.currentIndex() != 2 && !modalOn)
+    {
+        CheckPagination();
         $.scrollify.move("#3");
+    }
 });
 
 $('.developers_btn').click(function(){  
-    if($.scrollify.currentIndex() != 3)
+    if($.scrollify.currentIndex() != 3 && !modalOn)
+    {
+        CheckPagination();
         $.scrollify.move("#4");
+    }
 });
 
 $('.contactus_btn').click(function(){
-    if($.scrollify.currentIndex() != 4)
+    if($.scrollify.currentIndex() != 4 && !modalOn)
+    {
+        CheckPagination();
         $.scrollify.move("#5");
+    }
 });
 
 $(function() {
-  $.scrollify({
-    section : ".scrollspy"
-  });
+    $.scrollify({
+        section : ".scrollspy"
+    });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    window.setTimeout(CheckPagination, 1);
+}, false);
+
+var homePagination = document.getElementById("home_pagination");
+var aboutusPagination = document.getElementById("aboutus_pagination");
+var ourgamesPagination = document.getElementById("ourgames_pagination");
+var developersPagination = document.getElementById("developers_pagination");
+var contactusPagination = document.getElementById("contactus_pagination");
+
+function RemoveActive ()
+{
+    homePagination.classList.remove("active");
+    aboutusPagination.classList.remove("active");
+    ourgamesPagination.classList.remove("active");
+    developersPagination.classList.remove("active");
+    contactusPagination.classList.remove("active");
+}
+
+function CheckPagination ()
+{
+    RemoveActive();
+
+    if($.scrollify.currentIndex() == 0)
+        homePagination.classList.add("active");
+
+    if($.scrollify.currentIndex() == 1)
+        aboutusPagination.classList.add("active");
+
+    if($.scrollify.currentIndex() == 2)
+        ourgamesPagination.classList.add("active");
+
+    if($.scrollify.currentIndex() == 3)
+        developersPagination.classList.add("active");
+
+    if($.scrollify.currentIndex() == 4)
+        contactusPagination.classList.add("active");
+}
 
 // Nav
 window.ontransitionend = function() {DeleteClass()};
