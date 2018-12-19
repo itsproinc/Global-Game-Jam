@@ -15,13 +15,31 @@ M.Slider.init(slider, {
 const parallax = document.querySelectorAll('.parallax');
 M.Parallax.init(parallax);
 
+
 const popup = document.querySelectorAll('.modal');
-var
-modalOn = false;
+var modalOn = false;
 M.Modal.init(popup, {
     onOpenStart: LockMove,
     onCloseEnd: UnlockMove
 });
+
+function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(3.152886, 101.545894),
+      zoom:5,
+    };
+    
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+function myMap2() {
+    var mapProp= {
+      center:new google.maps.LatLng(1.124314, 104.032021),
+      zoom:5,
+    };
+    
+    var map = new google.maps.Map(document.getElementById("googleMap2"),mapProp);
+}
 
 function LockMove () {
     modalOn = true;
