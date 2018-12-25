@@ -1,0 +1,74 @@
+{
+  "_from": "object-fit-videos",
+  "_id": "object-fit-videos@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-JO1xk/GmegzFpY4IDOC/KPGqIBQ/iHWTF5Ux/fIILOWbbdjoOW/gR+L8hgJpDP1wFKKk8a0LU65MXpkNZNecug==",
+  "_location": "/object-fit-videos",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "object-fit-videos",
+    "name": "object-fit-videos",
+    "escapedName": "object-fit-videos",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/object-fit-videos/-/object-fit-videos-1.0.4.tgz",
+  "_shasum": "56ff1fdf4d824ed08172d77a1651154fc3df79b6",
+  "_spec": "object-fit-videos",
+  "_where": "O:\\Bakhtiar-183040004\\Internet dan Teknologi Web\\Tugas Besar",
+  "author": {
+    "name": "Todd Miller",
+    "email": "toddses@tricomb2b.com"
+  },
+  "bugs": {
+    "url": "https://github.com/TricomB2B/object-fit-videos/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Polyfill for object-fit and object-position CSS properties on video elements",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1"
+  },
+  "homepage": "https://github.com/TricomB2B/object-fit-videos#readme",
+  "keywords": [
+    "object-fit",
+    "object-position",
+    "javascript",
+    "polyfill",
+    "covers",
+    "contains",
+    "css",
+    "styles",
+    "internet",
+    "explorer",
+    "ies",
+    "shim",
+    "shiv",
+    "fills",
+    "videos",
+    "backgrounds"
+  ],
+  "license": "MIT",
+  "main": "object-fit-videos.js",
+  "name": "object-fit-videos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TricomB2B/object-fit-videos.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.4"
+}

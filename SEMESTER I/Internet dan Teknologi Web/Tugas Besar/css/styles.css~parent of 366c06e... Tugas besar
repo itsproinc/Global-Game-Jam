@@ -1,0 +1,347 @@
+html, body {
+    max-width: 100%;
+
+    overflow-x: hidden;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    height: 99vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: inherit;
+    
+    opacity: 1;
+    left: 0;
+}
+
+.overlay-desc {
+    background: rgba(0,0,0,0);
+    color: white;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90vh;
+
+    display: flex;
+}
+
+.blink {
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+  
+video {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+}
+
+nav {
+    position: fixed;
+    background-color: transparent;
+    padding: 0px 20px;
+    
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    left: 0;
+    top: 0;
+    z-index: 9998;
+}
+
+.caption {
+    padding: 30vh;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    padding: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.container, .container2 {
+    opacity: 0;
+    transform: translate(-100vw);
+    -moz-transform: translate(-100vw);
+    -webkit-transform: translate(-100vw);
+    -o-transform: translate(-100vw);
+}
+
+.sidenav {
+    z-index: 9999;
+}
+
+.fadein {
+    background-color: rgb(50, 50, 50);
+    transition: background-color 0.5s linear;
+}
+
+.fadeout {
+    background-color: transparent;
+    transition: background-color 0.5s linear;
+}
+
+.odd {
+    background-color: rgb(75, 75, 75);
+}
+
+.even {
+    background-color: rgb(100, 100 , 100);
+}
+
+.card, .card-reveal {
+    background-color: rgb(200, 200, 200) !important;
+}
+
+.collection p {
+    background-color:rgba(200, 200, 200) !important;
+}
+
+.parallax-container{
+    margin-top: -25px;
+    height: 250px;
+    min-height: 250px;
+    padding-top: 2%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parallax {
+    filter: blur(10px);
+    -moz-filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+}
+
+.pText {
+    text-shadow: 3px 5px 50px rgba(0, 0, 0, 0.5);
+}
+
+.fa-ellipsis-v {
+    font-size: 15px;
+}
+
+.aboutUs_sectionfadein {
+    animation: sectfadein 1s ease-in-out;
+    -moz-animation: sectfadein 1s ease-in-out;
+    -webkit-animation: sectfadein 1s ease-in-out;
+    -o-animation: sectfadein 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+.aboutUs_sectionfadeout {
+    animation: sectfadeout 1s ease-in-out;
+    -moz-animation: sectfadeout 1s ease-in-out;
+    -webkit-animation: sectfadeout 1s ease-in-out;
+    -o-animation: sectfadeout 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.ourGames_sectionfadein {
+    animation: sectfadeinodd 1s ease-in-out;
+    -moz-animation: sectfadeinodd 1s ease-in-out;
+    -webkit-animation: sectfadeinodd 1s ease-in-out;
+    -o-animation: sectfadeinodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+.ourGames_sectionfadeout {
+    animation: sectfadeoutodd 1s ease-in-out;
+    -moz-animation: sectfadeoutodd 1s ease-in-out;
+    -webkit-animation: sectfadeoutodd 1s ease-in-out;
+    -o-animation: sectfadeoutodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.developers_sectionfadein {
+    animation: sectfadein 1s ease-in-out;
+    -moz-animation: sectfadein 1s ease-in-out;
+    -webkit-animation: sectfadein 1s ease-in-out;
+    -o-animation: sectfadein 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+.developers_sectionfadeout {
+    animation: sectfadeout 1s ease-in-out;
+    -moz-animation: sectfadeout 1s ease-in-out;
+    -webkit-animation: sectfadeout 1s ease-in-out;
+    -o-animation: sectfadeout 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.contactUs_sectionfadein {
+    animation: sectfadeinodd 1s ease-in-out;
+    -moz-animation: sectfadeinodd 1s ease-in-out;
+    -webkit-animation: sectfadeinodd 1s ease-in-out;
+    -o-animation: sectfadeinodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+.contactUs_sectionfadeout {
+    animation: sectfadeoutodd 1s ease-in-out;
+    -moz-animation: sectfadeoutodd 1s ease-in-out;
+    -webkit-animation: sectfadeoutodd 1s ease-in-out;
+    -o-animation: sectfadeoutodd 1s ease-in-out;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+@keyframes sectfadein {
+    from {transform: translate(100vw); opacity: 0;}
+    to {transform: translate(0vw); opacity: 1;}
+}
+@-moz-keyframes sectfadein {
+    from {-moz-transform: translate(100vw); opacity: 0;}
+    to {-moz-transform: translate(0vw); opacity: 1;}
+}
+@-webkit-keyframes sectfadein {
+    from {-webkit-transform: translate(100vw); opacity: 0;}
+    to {-webkit-transform: translate(0vw); opacity: 1;}
+}
+@-o-keyframes sectfadein {
+    from {-o-transform: translate(100vw); opacity: 0;}
+    to {-o-transform: translate(0vw); opacity: 1;}
+}
+
+@keyframes sectfadeinodd {
+    from {transform: translate(-100vw); opacity: 0;}
+    to {transform: translate(0vw); opacity: 1;}
+}
+@-moz-keyframes sectfadeinodd {
+    from {-moz-transform: translate(-100vw); opacity: 0;}
+    to {-moz-transform: translate(0vw); opacity: 1;}
+}
+@-webkit-keyframes sectfadeinodd {
+    from {-webkit-transform: translate(-100vw); opacity: 0;}
+    to {-webkit-transform: translate(0vw); opacity: 1;}
+}
+@-o-keyframes sectfadeinodd {
+    from {-o-transform: translate(-100vw); opacity: 0;}
+    to {-o-transform: translate(0vw); opacity: 1;}
+}
+
+@keyframes sectfadeout {
+    from {transform: translate(0vw); opacity: 1;}
+    to {transform: translate(100vw); opacity: 0;}
+}
+@-moz-keyframes sectfadeout {
+    from {-moz-transform: translate(0vw); opacity: 1;}
+    to {-moz-transform: translate(100vw); opacity: 0;}
+}
+@-webkit-keyframes sectfadeout {
+    from {-webkit-transform: translate(0vw); opacity: 1;}
+    to {-webkit-transform: translate(100vw); opacity: 0;}
+}
+
+@-o-keyframes sectfadeout {
+    from {-o-transform: translate(0vw); opacity: 1;}
+    to {-o-transform: translate(100vw); opacity: 0;}
+}
+
+@keyframes sectfadeoutodd {
+    from {transform: translate(0vw); opacity: 1;}
+    to {transform: translate(-100vw); opacity: 0;}
+}
+@-moz-keyframes sectfadeoutodd {
+    from {-moz-transform: translate(0vw); opacity: 1;}
+    to {-moz-transform: translate(-100vw); opacity: 0;}
+}
+@-webkit-keyframes sectfadeoutodd {
+    from {-webkit-transform: translate(0vw); opacity: 1;}
+    to {-webkit-transform: translate(-100vw); opacity: 0;}
+}
+@-o-keyframes sectfadeoutodd {
+    from {-o-transform: translate(0vw); opacity: 1;}
+    to {-o-transform: translate(-100vw); opacity: 0;}
+}
+
+::-webkit-scrollbar {
+    width: 0em;
+}
+
+#pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    list-style: none;
+    z-index: 9998;
+}
+  
+#pagination li {
+    position: relative;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+
+    transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+#pagination a {
+    position: absolute;
+    text-decoration: none;  
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+#pagination .active {
+    background-color: darkred;
+    border-radius: 100%;
+}
+
+.modal {
+    width: 80vw;
+    min-height: 80vh;
+}
+
+footer {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 20px 0;
+    margin-top: -20px;
+}
