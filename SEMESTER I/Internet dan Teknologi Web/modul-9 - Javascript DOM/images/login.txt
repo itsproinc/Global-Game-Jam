@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Halaman Login</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<style>
+			.kotak {
+				width: 400px;
+				height: 300px;
+				border: 1px solid #eceff1;
+				margin: 100px auto;
+				background-color: #eaeaea;
+				border-radius: 10px;
+			}
+			body {
+				background-color: #bdbdbd;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ITW</a>
+				</div>
+				
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
+					</div><!-- /.navbar-collapse -->
+				</div>
+			</nav>
+			<div class="container">
+				<div class="kotak">
+					<form>
+						<legend style="text-align: center;">Halaman Login</legend>
+						
+						<div class="col-sm-12">
+							<div class="form-group col-lg-12">
+								<label for="user"><span class="glyphicon glyphicon-user"></span> Usename</label>
+								<input type="text" class="form-control" id="user" placeholder="username">
+							</div>
+							<div class="form-group col-lg-12">
+								<label for="pass"><span class="glyphicon glyphicon-lock"></span> Password</label>
+								<input type="password" class="form-control" id="pass" placeholder="password">
+							</div>
+							
+							<div class="form-group col-lg-12">
+								<button type="button" class="btn btn-primary" onClick="login()" style="margin-left:40%">Login</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</body>
+	</html>

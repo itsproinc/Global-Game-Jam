@@ -1,0 +1,239 @@
+
+<html>
+<head>
+	<title>Praktikum Internet Dan Teknologi Web | Javascript DOM</title>
+	<style>
+	body {
+		font-family : verdana;
+	}
+	h3 {
+		color : #3366FF;
+	}
+
+	font.tugas {
+		color :#ff3300;
+	}
+	
+	font.tugas-ket {
+		color :#ff0000;
+		font-size:18px;
+	}	
+	
+	.tugas-ket2 {
+		color:#CC0000;
+		font-size:22px;
+		font-style:italic;
+		font-weight:bold;
+		text-decoration:underline;
+	}	
+
+	.ket {
+		font-size : 10pt;
+	}
+
+	.code {
+		background:#eeeeee;
+		padding:4px;
+		font-family : "courier new";
+		font-size:11px;
+	}
+
+	a:link {color:#004789; text-decoration:none;}
+	a:visited {color:#004789; text-decoration:none;}
+	a:hover {color:#0370d6; text-decoration:underline;}
+	a:active {color:#0370d6; text-decoration:none;}
+
+	</style>
+</head>
+<body>
+	<table width="100%" bgcolor="#ffffff" cellpadding="10">
+		<tr>
+			<td align="right" class="ket"><font size="5"><b>Modul 9 Javascript DOM</b></font></td>
+		</tr>
+        
+        <tr>
+            <td>             
+                <a name="htmldom"><h3>HTML + DOM</h3></a>
+                <ul>
+                    <li>DOM, singkatan dari Document Object Model, adalah sebuah cross-platform dan sebuah bahasa independen untuk merepresentasikan dan berinteraksi dengan objek dalam HTML, XHTML, dan dokumen XML.
+                    <li>HTML DOM adalah cara baku untuk mengakses dan memanipulasi dokumen HTML.
+                    <li>Setiap dokumen HTML yang ditampilkan pada browser akan menjadi sebuah Document Object.
+                    <li>Sebuah Document Object menyediakan akses ke semua elemen HTML di dalam halaman.
+                    <li>Setiap elemen HTML dapat diakses dengan JavaScript atau bahasa pemrograman lain.<br><br>
+                </ul>                
+            </td>
+        </tr>
+        <tr>
+            <td class="ket">        
+                <a name="struktur"><h3>Struktur DOM</h3></a>
+                Dalam HTML DOM, semua yang berada di dokumen HTML adalah sebuah node (titik)
+                <ul>
+                    <li>Seluruh dokumen HTML disebut document node.
+                    <li>Setiap elemen HTML disebut element node.
+                    <li>Text di dalam elemen HTML disebut text node.
+                    <li>Setiap atribut TAG HTML disebut atribute node.
+                    <li>Komentar disebut comment node.
+                </ul>
+                <br><img src="images/imagesdom/1.jpg"><br><br>                
+            </td>
+        </tr>
+        <tr>
+            <td class="ket">
+            <a name="properti"><h3>Properti DOM</h3></a>
+            Berikut ini adalah properti dari DOM.<br>
+            <img src="images/imagesdom/2.jpg"><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="ket">
+            <a name="fungsi"><h3>Fungsi DOM</h3></a>
+            Berikut ini beberapa fungsi yang dimiliki oleh DOM<br>
+            <img src="images/imagesdom/3.jpg"><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="ket">
+            <a name="event"><h3>Javascript DOM Event</h3></a>
+            <p>Dengan menggunakan DOM, kita dapat mendaftarkan event handler yang berbeda untuk tiap-tiap elemen pada dokumen HTML.</p>
+            <p>Sebuah event pada dasarnya merupakan kombinasi dari fungsi.</p>
+            <p>Daftar event pada javascript dapat dilihat <a href="modul9-event-reference.html">disini</a>.</p>
+            </td>
+        </tr>
+         <tr>
+            <td class="ket">
+                <a name="daftar"><h3>Daftar Event</h3></a><br>
+                <img src="images/daftar.png" alt="Daftar Event">
+            </td>
+        </tr>
+        <tr>
+          <td class="tugas-ket2">
+            <a name="latihan">Contoh Kasus</a>
+            </td>
+        </tr>
+    <tr>
+    <td class="ket">
+        <a name="tugasmenu">
+          <h3>Contoh 1 - mengambil isi dari elemen form dan menampilkannya</h3>
+      <!-- <font class="tugas">L7&lt;NRP&gt;.html</font><br><br> -->
+      <p>salinlah script berikut dan perhatikan hasilnya.</p>
+            <img src="images/imagesdom/l9a.png"><br>
+            <p>tambahkanlah sebuah pengkondisian untuk menampilkan pesan kesalahan apabila user tidak memasukan inputan</p>
+            <br><br>
+
+            <h3>Contoh 2 - mengambil isi elemen dan menggunakannya untuk berpindah halaman</h3>
+            <!-- <font class="tugas">8&lt;NRP&gt;.html</font><br><br> -->
+            <p>salinlah script berikut dan perhatikan hasilnya.</p>
+            <img src="images/imagesdom/l9b.png"><br>
+            <p>tambahkanlah 3 link baru pada select, lalu cek script tetap berfungsi atau tidak</p>
+            <p>tambahkanlah sebuah pengkondisian untuk menampilkan pesan kesalahan apabila user memilih option dengan value kosong</p>
+            <br><br>
+
+            <h3>Contoh 3 - menampilkan dan menyembunyikan elemen menggunakan javascript</h3>
+            <!-- <font class="tugas">L9&lt;NRP&gt;.html</font><br><br> -->
+            <p>salinlah script berikut dan perhatikan hasilnya.</p>
+            <img src="images/imagesdom/l9c.png"><br>
+            <p>lakukan hal yang sama ketika kita menekan link 'sembunyikan'. tapi kali ini sembunyikan teks-nya.</p>
+            <br><br>
+
+            <h3>Contoh 4 - menyisipkan elemen baru di dalam elemen yang sudah ada</h3>
+            <!-- <font class="tugas">L10&lt;NRP&gt;.html</font><br><br> -->
+            <p>salinlah script berikut dan perhatikan hasilnya.</p>
+            <img src="images/imagesdom/l9d.png"><br>
+            <p>coba buat sebuah contoh kasus baru menggunakan innerHTML</p>
+            <br><br>
+    </a>        
+    </td>
+    </tr>
+        <tr>
+            <td class="tugas-ket2">
+            <a name="tugas">Latihan</a>
+
+            </td>
+
+        </tr>
+        <tr>
+        <td class="ket">
+        <a name="tugasmenu">
+            <h3>Latihan 1 - Menambahkan fungsi login pada website</h3>
+            <ul>
+                
+                <font class="tugas">L1&lt;NRP&gt;.html</font><br><br>
+                <li>Pada latihan kali ini, kita akan bekerja dengan halaman login.</li><br>
+                <li>salin source code <a href="images/login.txt">berikut ini</a> terlebih dahulu. untuk menggunakan source code tadi harus terkoneksi internet</li>
+                <li>buatlah sebuah fungsi login menggunakan javascript yang mengecek username dan password yang diinputkan user.</li>
+                <li>jika username dan password = "admin" maka tampilkan popup alert "Selamat datang admin" dan alihkan ke halaman admin.</li>
+                <li>tangani apabila user tidak memasukkan input tapi menekan tombol login.</li>
+                <li>tangani juga apabila user salah memasukkan username dan password.</li>
+                <li>buatlah halaman administrator (admin.html) dan isilah halamannya minimal dengan tulisan "Ini adalah halaman Admin".</li>
+                <li>pada halaman admin, ubah link login menjadi logout untuk kembali ke halaman utama</li><br>
+                <img src="images/imagesdom/login.gif"><br><br>
+            </ul>
+           
+            <br><br>
+
+            <h3>Latihan 2 - Mengganti Huruf menjadi Kapital</h3>
+            <ul>
+                
+                <font class="tugas">L2&lt;NRP&gt;.html</font><br><br>
+                Gunakan source code yang ada pada <a href="images/source code.zip" title="">link ini</a> untuk latihan 2 sampai 4
+                <br>
+                
+                <img src="images/new 2/1.gif" width="700"><br><br>
+
+                Pada latihan 2, mengubah huruf dalam cover menjadi kapital dan sebaliknya.
+                <br><br>
+                perhatikan, coba serta pahami kode berikut ini : <br>
+                <img src="images/new 2/11.png" width="700"><br><br>
+                Apabila ada kesulitan segera bertanya pada asisten atau dosen.
+            </ul>
+           
+            <br><br>
+
+
+            <h3>Latihan 3 - Mengubah posisi serta warna background navbar</h3>
+            <ul>
+                
+                <font class="tugas">L3&lt;NRP&gt;.html</font><br><br>
+                Pada latihan 3, mengubah posisi serta warna background untuk menu navigasi.
+                <img src="images/new 2/2.gif" width="700"><br><br>
+
+                
+                <br><br>
+                perhatikan, coba serta pahami kode berikut ini : <br>
+                <img src="images/new 2/12.png" width="700"><br><br>
+                Apabila ada kesulitan segera bertanya pada asisten atau dosen.
+            </ul>
+           
+            <br><br>
+
+            <h3>Latihan 4 - Simulasi Array menggunakan "Lemari"</h3>
+            <ul>
+                
+                <font class="tugas">L4&lt;NRP&gt;.html</font><br><br>
+                Pada latihan 4, melakukan simulasi penggunaan array dengan "lemari".
+                <br><br>
+                perhatikan, coba serta pahami kode berikut ini : <br>
+                <img src="images/l4.png" alt="" style="width: 600px; height: 365px;"><br><br>
+                <p>Hasilnya : </p>
+                <img src="images/new 2/3.gif" width="700"><br><br>
+                Apabila ada kesulitan segera bertanya pada asisten atau dosen.
+            </ul>
+           
+            <br><br>
+
+           
+        </a>        
+        </td>
+        </tr> 
+		
+        
+	</table>
+  <font color="#0066CC" size="+1">Setiap latihan dimasukkan ke dalam file javascript dengan nama sesuai latihan kemudian di simpan ke folder tugas10&lt;NRP&gt;, lalu zip dengan nama yang sama dan menjadi tugas. <br>
+  </font><br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
+
