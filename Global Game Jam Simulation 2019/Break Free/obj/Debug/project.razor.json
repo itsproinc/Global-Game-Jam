@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "o:\\Bakhtiar-183040004\\Global Game Jam Simulation 2019\\Break Free\\Assembly-CSharp.csproj",
+  "TargetFramework": "v4.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
