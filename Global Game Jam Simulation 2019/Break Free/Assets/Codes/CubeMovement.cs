@@ -55,31 +55,21 @@ public class CubeMovement : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoi
         {
             pos.x = (pos.x / movementJoyStick.rectTransform.sizeDelta.x);
             if (pos.x > 1)
-            {
                 pos.x = 1;
-            }
 
             if (pos.x < -1)
-            {
                 pos.x = -1;
-            }
 
             pos.y = (pos.y / movementJoyStick.rectTransform.sizeDelta.y);
             if (pos.y > 1)
-            {
                 pos.y = 1;
-            }
 
             if (pos.y < -1)
-            {
                 pos.y = -1;
-            }
 
             inputVector = new Vector3 (pos.x * 2, 0, pos.y * 2);
             if (inputVector.magnitude > 1.0f)
-            {
                 inputVector = inputVector.normalized;
-            }
 
             movementJoyStickInternal.rectTransform.anchoredPosition = new Vector3 (inputVector.x * (movementJoyStick.rectTransform.sizeDelta.x / 2), inputVector.z * (movementJoyStick.rectTransform.sizeDelta.y / 2));
         }
