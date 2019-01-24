@@ -53,14 +53,14 @@ public class AI : MonoBehaviour
                 if (gotoWaypoint < currentWaypoint)
                 {
                     enemyObject.GetComponent<SpriteRenderer> ().flipX = true; // Left
-                    enemyView.GetComponent<SpriteRenderer> ().flipX = true;
                     enemyView.localPosition = new Vector3 (-1.96f, enemyView.localPosition.y, enemyView.localPosition.z);
+                    enemyView.localEulerAngles = new Vector3 (enemyView.rotation.x, enemyView.rotation.y, 180f);
                 }
                 else
                 {
                     enemyObject.GetComponent<SpriteRenderer> ().flipX = false; // Right
-                    enemyView.GetComponent<SpriteRenderer> ().flipX = false;
                     enemyView.localPosition = new Vector3 (1.96f, enemyView.localPosition.y, enemyView.localPosition.z);
+                    enemyView.localEulerAngles = new Vector3 (enemyView.rotation.x, enemyView.rotation.y, 0f);
                 }
             }
         }
@@ -72,7 +72,10 @@ public class AI : MonoBehaviour
             if (gotoWaypoint < currentWaypoint)
             {
                 if (enemyObject.position.x > patrolPoint [gotoWaypoint].transform.position.x)
+                {
+                    enemyObject.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
                     enemyObject.velocity = new Vector2 (speed * -1, enemyObject.velocity.y);
+                }
                 else
                 {
                     if (!arrived)
@@ -86,6 +89,7 @@ public class AI : MonoBehaviour
             {
                 if (enemyObject.position.x < patrolPoint [gotoWaypoint].transform.position.x)
                 {
+                    enemyObject.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
                     enemyObject.velocity = new Vector2 (speed * 1, enemyObject.velocity.y);
                 }
                 else
@@ -102,6 +106,7 @@ public class AI : MonoBehaviour
 
     IEnumerator wait (int length)
     {
+        enemyObject.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         move = false;
         yield return new WaitForSeconds (length);
         currentWaypoint = gotoWaypoint;
