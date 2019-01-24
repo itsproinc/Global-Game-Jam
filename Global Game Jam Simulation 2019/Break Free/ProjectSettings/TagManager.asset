@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ladder
+  - Hiding Door
+  - Enemy
+  - Cell
   layers:
   - Default
   - TransparentFX
@@ -38,7 +42,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Backdrop
+  - name: Back Wall
     uniqueID: 3840665389
     locked: 0
   - name: Default
