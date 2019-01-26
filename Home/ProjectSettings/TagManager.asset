@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UI_Dialogue
   - UI_UpgradePanel
+  - UI_Home
   layers:
   - Default
   - TransparentFX

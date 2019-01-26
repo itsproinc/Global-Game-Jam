@@ -5,14 +5,24 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
+    public GameObject upgradePanel;
+    public GameObject dialoguePanel;
+
     public string textInput;
     public float textSpeed;
+
     public Image dialogueImage;
     public Sprite [] dialogueImages;
 
     public Text textOutput;
 
     public List<char> letters = new List<char> ();
+
+    public void Reset ()
+    {
+        dialoguePanel = GameObject.FindGameObjectWithTag ("UI_Dialogue");
+        upgradePanel = GameObject.Find ("UI_UpgradePanel");
+    }
 
     public void _DialogueTrigger (string input, int dialogueCharacter)
     {
@@ -40,5 +50,8 @@ public class Dialogue : MonoBehaviour
     {
         letters.Clear ();
         textOutput.text = textInput;
+
+        upgradePanel.SetActive (true);
+        dialoguePanel.SetActive (false);
     }
 }

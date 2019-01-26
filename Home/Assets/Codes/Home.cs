@@ -7,6 +7,9 @@ public class Home : MonoBehaviour
     public Dialogue dialogue;
     public GameObject dialoguePanel;
 
+    public GameObject homeDoor;
+    public GameObject character;
+
     public int curHomeTier;
 
     public int homeTier;
@@ -19,9 +22,10 @@ public class Home : MonoBehaviour
         upgradePanel = GameObject.FindGameObjectWithTag ("UI_UpgradePanel");
     }
 
-    public void Start ()
+    private void Start ()
     {
-        AtHome ();
+        // Spawn player at door
+        character.transform.position = homeDoor.transform.position;
     }
 
     public void AtHome ()
