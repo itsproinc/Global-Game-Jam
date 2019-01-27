@@ -5,53 +5,72 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject upgradePanel;
     public GameObject dialoguePanel;
+
+    public GameObject mouthSprite;
 
     public string textInput;
     public float textSpeed;
 
-    public Image dialogueImage;
-    public Sprite [] dialogueImages;
-
     public Text textOutput;
 
     public List<char> letters = new List<char> ();
+    public int mouthGap;
 
     public void Reset ()
     {
         dialoguePanel = GameObject.FindGameObjectWithTag ("UI_Dialogue");
-        upgradePanel = GameObject.Find ("UI_UpgradePanel");
     }
 
-    public void _DialogueTrigger (string input, int dialogueCharacter)
+    public void _DialogueTrigger (string input)
     {
-        StartCoroutine (DialogueTrigger (input, 0));
+        dialoguePanel.SetActive (true);
+        StartCoroutine (DialogueTrigger (input));
     }
 
-    IEnumerator DialogueTrigger (string input, int dialogueCharacter)
+    private void Start ()
     {
-        textInput = input;
+        mouthSprite.SetActive (false);
+    }
+
+    IEnumerator DialogueTrigger (string input)
+    {
         letters.Clear (); // Reset letters list
-        foreach (char letter in input)
-        {
-            letters.Add (letter);
-        }
+        textOutput.text = "";
+        mouthSprite.SetActive (mouthSprite.activeSelf ? false : true); // Open mouth first
 
+        textInput = input;
+        foreach (char letter in input)
+            letters.Add (letter);
+
+        int letterCount = 0;
         while (textOutput.text != input)
         {
+            if (letterCount >= mouthGap)
+            {
+                mouthSprite.SetActive (mouthSprite.activeSelf ? false : true);
+                letterCount = 0;
+            }
+
             textOutput.text = textOutput.text + letters [0];
             letters.RemoveAt (0);
+            letterCount++;
             yield return new WaitForSeconds (textSpeed);
         }
     }
 
     public void SkipText ()
     {
+        if (textOutput.text == textInput)
+            dialoguePanel.SetActive (false);
+
         letters.Clear ();
         textOutput.text = textInput;
+    }
 
-        upgradePanel.SetActive (true);
-        dialoguePanel.SetActive (false);
+    private void Update ()
+    {
+        if (letters.Count == 0)
+            mouthSprite.SetActive (false);
     }
 }
