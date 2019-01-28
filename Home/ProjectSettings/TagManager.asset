@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - UI_Dialogue
   - UI_UpgradePanel
-  - UI_Home
+  - UI_Dialogue
   - Buttons
+  - Money
   layers:
   - Default
   - TransparentFX
@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
   - 
   - 
   - 

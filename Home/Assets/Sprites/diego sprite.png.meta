@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: a7dbf9ca48fb4b644a46e9707ff35982
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: Hair
+    21300004: Body
+    21300006: Hand_L
+    21300008: Weapon
+    21300010: Hand_R
+    21300012: Foot_R
+    21300014: Foot_L
+    21300016: diego sprite_8
+    21300018: diego sprite_9
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 208.99998
+        y: 2365.0002
+        width: 1572.5
+        height: 1486.5625
+      alignment: 9
+      pivot: {x: 0.56706685, y: 0.11437077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584152505f139d345b1bca3dad30b977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair
+      rect:
+        serializedVersion: 2
+        x: 2720.0002
+        y: 3022.0002
+        width: 935.78125
+        height: 834.21875
+      alignment: 9
+      pivot: {x: 0.81958175, y: 0.86749274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742512ddae0c9184a8995ea3000d89fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 688.6807
+        y: 1214.3165
+        width: 498.2813
+        height: 935.7811
+      alignment: 9
+      pivot: {x: 0.4953412, y: 0.5061906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96960fea4ab08a40b21df2c05998b15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_L
+      rect:
+        serializedVersion: 2
+        x: 2030.985
+        y: 2090.3914
+        width: 1013.9064
+        height: 541.25
+      alignment: 9
+      pivot: {x: 0.10265508, y: 0.78281474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723ff09ab7d84514c9ac18c8bc43177a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 587
+        width: 427.96875
+        height: 2326.4062
+      alignment: 9
+      pivot: {x: 0.49536327, y: 0.22039342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a3e97232a774246a42a8e82302d418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_R
+      rect:
+        serializedVersion: 2
+        x: 1737.9532
+        y: 1336.1094
+        width: 1021.7189
+        height: 705.3124
+      alignment: 9
+      pivot: {x: 0.09971923, y: 0.82697403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e216cf95f1d9c374999bc3a2c3ba4b40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foot_R
+      rect:
+        serializedVersion: 2
+        x: 305.35947
+        y: 176.31262
+        width: 357.65628
+        height: 799.0625
+      alignment: 9
+      pivot: {x: 0.5761353, y: 0.87369484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa6c7e3b07bf1d429022f50fc756057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foot_L
+      rect:
+        serializedVersion: 2
+        x: 852.4845
+        y: 241.90634
+        width: 279.53137
+        height: 748.28125
+      alignment: 9
+      pivot: {x: 0.48658448, y: 0.8794609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ca5d3f6b1fe95448286530c62ae6d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 673098f9fdc3b7a4692490b1bb6976ae
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 636841140806414202
+  assetBundleName: 
+  assetBundleVariant: 

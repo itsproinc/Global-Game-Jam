@@ -56,6 +56,11 @@ public class Home : MonoBehaviour
         animator.SetTrigger ("Move11");
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     private void Update ()
     {
         animator.SetFloat ("speed", speed);

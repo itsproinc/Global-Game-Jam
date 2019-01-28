@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Upgradeables : MonoBehaviour
 {
     public Home home;
-
     public Dialogue dialogue;
     public GameObject dialoguePanel;
     public GameObject upgradePanel;
@@ -32,11 +31,11 @@ public class Upgradeables : MonoBehaviour
     public int UpgradeablesIndex;
 
     public Text moneyText;
-    public int curMoney;
+    public static int curMoney;
 
-    public float attackDamage;
-    public float attackSpeed;
-    public float mental;
+    public static float attackDamage;
+    public static float attackSpeed;
+    public static float mental;
 
     private void Reset ()
     {
@@ -46,13 +45,12 @@ public class Upgradeables : MonoBehaviour
     }
 
     private void Start ()
-    {
-        //PlayerPrefs.DeleteAll ();
-        tooltipTexts [0] = "Attack Speed x1.5";
-        tooltipTexts [1] = "Attack damage x1.5";
+    {   
+        tooltipTexts [0] = "Attack damage x1.5";
+        tooltipTexts [1] = "Attack Speed x1.5";
         tooltipTexts [2] = "Mental x1.5";
-        tooltipTexts [3] = "Attack Speed x2";
-        tooltipTexts [4] = "Attack damage x2";
+        tooltipTexts [3] = "Attack damage x2";
+        tooltipTexts [4] = "Attack Speed x2";
         tooltipTexts [5] = "Mental x2";
         tooltipTexts [6] = "Attack Speed x2.5";
         tooltipTexts [7] = "Attack damage x2.5";
@@ -76,11 +74,10 @@ public class Upgradeables : MonoBehaviour
     {
         upgradePanel.SetActive (true);
 
-        curMoney = PlayerPrefs.GetInt ("money");
-        attackDamage = PlayerPrefs.GetFloat ("attackDamage");
-        attackSpeed = PlayerPrefs.GetFloat ("attackSpeed");
-        mental = PlayerPrefs.GetFloat ("mental");
-
+        curMoney = PlayerPrefs.GetInt ("money", 500);
+        attackDamage = PlayerPrefs.GetFloat ("attackDamage",1);
+        attackSpeed = PlayerPrefs.GetFloat ("attackSpeed",1);
+        mental = PlayerPrefs.GetFloat ("mental",1);
         moneyText.text = curMoney.ToString ();
 
         for (int i = 0; i < ownedObjects.Length; i++)
@@ -128,37 +125,38 @@ public class Upgradeables : MonoBehaviour
             dialogue._DialogueTrigger ("Wahhh.. Sayang makin cinta aku sama kamu");
             ownedObjects [UpgradeablesIndex] = true;
             curMoney -= objectPrices [UpgradeablesIndex];
+            print(UpgradeablesIndex);
 
             switch (UpgradeablesIndex)
             {
                 case 0:
-                    attackDamage = 1.5f;
+                    attackDamage += .5f;
                     break;
                 case 1:
-                    attackSpeed = 1.5f;
+                    attackSpeed += .5f;
                     break;
                 case 2:
-                    mental = 1.5f;
+                    mental += .5f;
                     break;
                 case 3:
-                    attackDamage = 2;
+                    attackDamage += 1;
                     break;
                 case 4:
-                    attackSpeed = 2;
+                    attackSpeed += 1;
                     break;
                 case 5:
-                    mental = 2;
+                    mental += 1;
                     break;
                 case 6:
-                    attackDamage = 2.5f;
+                    attackSpeed += 1.5f;
                     break;
                 case 7:
-                    attackSpeed = 2.5f;
+                    attackDamage += 1.5f;
                     break;
             }
 
-            home.buyButtonText.text = "Shop";
             tooltip.localPosition = new Vector2 (1920, 1080);
+            home.buyButtonText.text = "Shop";
             Save ();
         }
         else
