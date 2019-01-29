@@ -9,7 +9,8 @@ public class daspro1 {
 		Scanner sc = new Scanner(System.in);
 		String nama = "Bakhtiar";
 		
-		System.out.println("Ketikkan nama: ");
+		System.out.print("Ketikkan nama: "); 
+		nama = sc.next();
 		System.out.println("hello " + nama);
 	}
 }
